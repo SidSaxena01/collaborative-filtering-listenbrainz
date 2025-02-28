@@ -1,0 +1,32 @@
+[project]
+name = "listenbrainz"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.13.3",
+    "duckdb>=1.2.0",
+    "implicit>=0.7.2",
+    "loguru>=0.7.3",
+    "matplotlib>=3.10.0",
+    "networkx>=3.4.2",
+    "numpy>=2.2.3",
+    "pandas>=2.2.3",
+    "polars>=1.23.0",
+    "pyarrow>=19.0.1",
+    "python-dotenv>=1.0.1",
+    "python-louvain>=0.16",
+    "requests>=2.32.3",
+    "scikit-learn>=1.6.1",
+    "scipy>=1.15.2",
+    "seaborn>=0.13.2",
+    "xopen>=2.0.2",
+    "zstandard>=0.23.0",
+    "zstd>=1.5.6.4",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+]
