@@ -12,3 +12,4 @@ scratch
 
 # secrets
 .env
+*.pkl
