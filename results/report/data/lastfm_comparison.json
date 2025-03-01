@@ -1,0 +1,330 @@
+[
+  {
+    "artist_name": "The Pineapple Thief",
+    "model_recommendations": [
+      "Steven Wilson",
+      "Riverside",
+      "Soen",
+      "VOLA",
+      "Pure Reason Revolution",
+      "Unknown Artist",
+      "Blackfield",
+      "Gazpacho",
+      "Lunatic Soul",
+      "Pain of Salvation"
+    ],
+    "lastfm_recommendations": [
+      "Bruce Soord",
+      "Steven Wilson",
+      "Riverside",
+      "Porcupine Tree",
+      "Gazpacho",
+      "Blackfield",
+      "Lunatic Soul",
+      "Pure Reason Revolution",
+      "Big Big Train",
+      "No-Man"
+    ],
+    "overlap": [
+      "Steven Wilson",
+      "Riverside",
+      "Gazpacho",
+      "Blackfield",
+      "Pure Reason Revolution",
+      "Lunatic Soul"
+    ],
+    "overlap_percentage": 60.0
+  },
+  {
+    "artist_name": "Foo Fighters",
+    "model_recommendations": [
+      "Red Hot Chili Peppers",
+      "Nirvana",
+      "Weezer",
+      "System of a Down",
+      "Green Day",
+      "Muse",
+      "Rage Against the Machine",
+      "Pearl Jam",
+      "The Offspring",
+      "blink\u2010182"
+    ],
+    "lastfm_recommendations": [
+      "Taylor Hawkins & The Coattail Riders",
+      "Pearl Jam",
+      "Red Hot Chili Peppers",
+      "Nirvana",
+      "Audioslave",
+      "Stone Temple Pilots",
+      "Them Crooked Vultures",
+      "Queens of the Stone Age",
+      "Soundgarden",
+      "Bush"
+    ],
+    "overlap": [
+      "Nirvana",
+      "Red Hot Chili Peppers",
+      "Pearl Jam"
+    ],
+    "overlap_percentage": 30.0
+  },
+  {
+    "artist_name": "Alvvays",
+    "model_recommendations": [
+      "Big Thief",
+      "Slowdive",
+      "Beach House",
+      "Magdalena Bay",
+      "Cocteau Twins",
+      "Elliott Smith",
+      "My Bloody Valentine",
+      "Adrianne Lenker",
+      "Future Islands",
+      "Sufjan Stevens"
+    ],
+    "lastfm_recommendations": [
+      "Snail Mail",
+      "Beach House",
+      "Japanese Breakfast",
+      "Fazerdaze",
+      "Slow Pulp",
+      "Hatchie",
+      "Soccer Mommy",
+      "Hazel English",
+      "Jay Som",
+      "Tennis"
+    ],
+    "overlap": [
+      "Beach House"
+    ],
+    "overlap_percentage": 10.0
+  },
+  {
+    "artist_name": "Timecop1983",
+    "model_recommendations": [
+      "Miami Nights 1984",
+      "The Midnight",
+      "Wice",
+      "Kalax",
+      "Neon Nox",
+      "Waveshaper",
+      "Dynatron",
+      "GUNSHIP",
+      "Mitch Murder",
+      "Le Matos"
+    ],
+    "lastfm_recommendations": [
+      "Kalax",
+      "Marvel83'",
+      "Neon Nox",
+      "FM-84",
+      "The Midnight",
+      "W O L F C L U B",
+      "2wice",
+      "Miami Nights 1984",
+      "Gunship",
+      "Kiile"
+    ],
+    "overlap": [
+      "Kalax",
+      "Neon Nox",
+      "Miami Nights 1984",
+      "The Midnight"
+    ],
+    "overlap_percentage": 40.0
+  },
+  {
+    "artist_name": "Yumi Zouma",
+    "model_recommendations": [
+      "Hazel English",
+      "Tennis",
+      "Barrie",
+      "Caroline Rose",
+      "Blood Orange",
+      "Fazerdaze",
+      "Mr Little Jeans",
+      "Night Tapes",
+      "Rhye",
+      "Soccer Mommy"
+    ],
+    "lastfm_recommendations": [
+      "Hazel English",
+      "Barrie",
+      "TOPS",
+      "sjowgren",
+      "Fazerdaze",
+      "no vacation",
+      "Rheya",
+      "Craft Spells",
+      "Pure Bathing Culture",
+      "Reave"
+    ],
+    "overlap": [
+      "Hazel English",
+      "Fazerdaze",
+      "Barrie"
+    ],
+    "overlap_percentage": 30.0
+  },
+  {
+    "artist_name": "Emancipator",
+    "model_recommendations": [
+      "Bonobo",
+      "Tycho",
+      "Rival Consoles",
+      "DJ Shadow",
+      "R\u00f6yksopp",
+      "Quantic",
+      "The xx",
+      "Little People",
+      "RJD2",
+      "Four Tet"
+    ],
+    "lastfm_recommendations": [
+      "Little People",
+      "Bonobo",
+      "Tor",
+      "Tycho",
+      "Nym",
+      "Kodomo",
+      "Pretty Lights",
+      "Yppah",
+      "Metaform",
+      "Hugo Kant"
+    ],
+    "overlap": [
+      "Bonobo",
+      "Little People",
+      "Tycho"
+    ],
+    "overlap_percentage": 30.0
+  },
+  {
+    "artist_name": "Nirvana",
+    "model_recommendations": [
+      "Red Hot Chili Peppers",
+      "Radiohead",
+      "System of a Down",
+      "Green Day",
+      "Pink Floyd",
+      "Metallica",
+      "Foo Fighters",
+      "Muse",
+      "The Beatles",
+      "Daft Punk"
+    ],
+    "lastfm_recommendations": [
+      "Kurt Cobain",
+      "Alice in Chains",
+      "Soundgarden",
+      "The Jins",
+      "Mudhoney",
+      "Meat Puppets",
+      "Stone Temple Pilots",
+      "Foo Fighters",
+      "Hole",
+      "Mad Season"
+    ],
+    "overlap": [
+      "Foo Fighters"
+    ],
+    "overlap_percentage": 10.0
+  },
+  {
+    "artist_name": "Men I Trust",
+    "model_recommendations": [
+      "Clairo",
+      "Mac DeMarco",
+      "Beach House",
+      "Crumb",
+      "The Mar\u00edas",
+      "Magdalena Bay",
+      "Mitski",
+      "TV Girl",
+      "beabadoobee",
+      "Tame Impala"
+    ],
+    "lastfm_recommendations": [
+      "Tokyo Tea Room",
+      "The Mar\u00edas",
+      "Crumb",
+      "no vacation",
+      "Vansire",
+      "Luna Li",
+      "Bernache",
+      "Far Caspian",
+      "Clairo",
+      "RICEWINE"
+    ],
+    "overlap": [
+      "Crumb",
+      "Clairo",
+      "The Mar\u00edas"
+    ],
+    "overlap_percentage": 30.0
+  },
+  {
+    "artist_name": "Steven Wilson",
+    "model_recommendations": [
+      "The Pineapple Thief",
+      "Porcupine Tree",
+      "Dream Theater",
+      "Unknown Artist",
+      "Riverside",
+      "Rush",
+      "Marillion",
+      "Leprous",
+      "Opeth",
+      "Anathema"
+    ],
+    "lastfm_recommendations": [
+      "Porcupine Tree",
+      "Blackfield",
+      "The Pineapple Thief",
+      "No-Man",
+      "Riverside",
+      "Storm Corrosion",
+      "Lunatic Soul",
+      "Bruce Soord",
+      "Gazpacho",
+      "Tim Bowness"
+    ],
+    "overlap": [
+      "The Pineapple Thief",
+      "Riverside",
+      "Porcupine Tree"
+    ],
+    "overlap_percentage": 30.0
+  },
+  {
+    "artist_name": "Tycho",
+    "model_recommendations": [
+      "Bonobo",
+      "Four Tet",
+      "M83",
+      "Jamie xx",
+      "Boards of Canada",
+      "R\u00f6yksopp",
+      "Caribou",
+      "Khruangbin",
+      "The xx",
+      "DJ Shadow"
+    ],
+    "lastfm_recommendations": [
+      "Emancipator",
+      "Helios",
+      "Kodomo",
+      "Ulrich Schnauss",
+      "Yppah",
+      "Bonobo",
+      "Little People",
+      "Mokhov",
+      "Jon Hopkins",
+      "Pretty Lights"
+    ],
+    "overlap": [
+      "Bonobo"
+    ],
+    "overlap_percentage": 10.0
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "dataset_statistics": {
+    "total_users": 15782,
+    "total_artists": 716347,
+    "total_entries": 8094055,
+    "total_listens": 74959322,
+    "avg_listens_per_user": 4749.671904701559,
+    "avg_artists_per_user": 512.8662400202762,
+    "avg_users_per_artist": 11.299070143380233
+  },
+  "top_artists": [
+    {
+      "artist_id": "20244d07-534f-4eff-b4d4-930878889970",
+      "total_listens": 479340.0,
+      "unique_listeners": 3815,
+      "name": "Taylor Swift"
+    },
+    {
+      "artist_id": "f59c5520-5f46-4d2c-b2c4-822eabf53419",
+      "total_listens": 280773.0,
+      "unique_listeners": 4350,
+      "name": "Linkin Park"
+    },
+    {
+      "artist_id": "260b6184-8828-48eb-945c-bc4cb6fc34ca",
+      "total_listens": 269405.0,
+      "unique_listeners": 3012,
+      "name": "Charli xcx"
+    },
+    {
+      "artist_id": "a74b1b7f-71a5-4011-9441-d0b5e4122711",
+      "total_listens": 233205.0,
+      "unique_listeners": 4570,
+      "name": "Radiohead"
+    },
+    {
+      "artist_id": "381086ea-f511-4aba-bdf9-71c753dc5077",
+      "total_listens": 174918.0,
+      "unique_listeners": 3199,
+      "name": "Kendrick Lamar"
+    },
+    {
+      "artist_id": "f4fdbb4c-e4b7-47a0-b83b-d91bbfcfa387",
+      "total_listens": 169426.0,
+      "unique_listeners": 2597,
+      "name": "Ariana Grande"
+    },
+    {
+      "artist_id": "f4abc0b5-3f7a-4eff-8f78-ac078dbce533",
+      "total_listens": 161542.0,
+      "unique_listeners": 3850,
+      "name": "Billie Eilish"
+    },
+    {
+      "artist_id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+      "total_listens": 160910.0,
+      "unique_listeners": 3757,
+      "name": "The Beatles"
+    },
+    {
+      "artist_id": "b51c672b-85e0-48fe-8648-470a2422229f",
+      "total_listens": 158965.0,
+      "unique_listeners": 825,
+      "name": "aespa"
+    },
+    {
+      "artist_id": "164f0d73-1234-4e2c-8743-d77bf2191051",
+      "total_listens": 149967.0,
+      "unique_listeners": 2465,
+      "name": "Ye"
+    },
+    {
+      "artist_id": "83d91898-7763-47d7-b03b-b92132375c47",
+      "total_listens": 122698.0,
+      "unique_listeners": 3623,
+      "name": "Pink Floyd"
+    },
+    {
+      "artist_id": "b7539c32-53e7-4908-bda3-81449c367da6",
+      "total_listens": 118374.0,
+      "unique_listeners": 2840,
+      "name": "Lana Del Rey"
+    },
+    {
+      "artist_id": "a6c6897a-7415-4f8d-b5a5-3a5e05f3be67",
+      "total_listens": 115222.0,
+      "unique_listeners": 2646,
+      "name": "twenty one pilots"
+    },
+    {
+      "artist_id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+      "total_listens": 114536.0,
+      "unique_listeners": 3493,
+      "name": "David Bowie"
+    },
+    {
+      "artist_id": "084308bd-1654-436f-ba03-df6697104e19",
+      "total_listens": 110132.0,
+      "unique_listeners": 3778,
+      "name": "Green Day"
+    },
+    {
+      "artist_id": "6f1a58bf-9b1b-49cf-a44a-6cefad7ae04f",
+      "total_listens": 109786.0,
+      "unique_listeners": 3072,
+      "name": "Dua Lipa"
+    },
+    {
+      "artist_id": "1882fe91-cdd9-49c9-9956-8e06a3810bd4",
+      "total_listens": 109589.0,
+      "unique_listeners": 2490,
+      "name": "Sabrina Carpenter"
+    },
+    {
+      "artist_id": "09887aa7-226e-4ecc-9a0c-02d2ae5777e1",
+      "total_listens": 107141.0,
+      "unique_listeners": 1743,
+      "name": "Carly Rae Jepsen"
+    },
+    {
+      "artist_id": "cc0b7089-c08d-4c10-b6b0-873582c17fd6",
+      "total_listens": 103050.0,
+      "unique_listeners": 3219,
+      "name": "System of a Down"
+    },
+    {
+      "artist_id": "69ee3720-a7cb-4402-b48d-a02c366f2bcf",
+      "total_listens": 102208.0,
+      "unique_listeners": 3207,
+      "name": "The Cure"
+    }
+  ]
+}

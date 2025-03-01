@@ -1,0 +1,47 @@
+{
+  "optimal_clusters": 3,
+  "cluster_stats": [
+    {
+      "cluster_id": 0,
+      "user_count": 1622,
+      "avg_artists": 2014.4759556103577,
+      "avg_listens": 23390.832305795313,
+      "avg_listens_per_artist": 25.30906808389747,
+      "example_users": [
+        11731,
+        12150,
+        24391,
+        24709,
+        24732
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "user_count": 12495,
+      "avg_artists": 381.7462985194078,
+      "avg_listens": 2721.9411764705883,
+      "avg_listens_per_artist": 7.6830887905126115,
+      "example_users": [
+        7244,
+        7289,
+        11342,
+        11364,
+        11365
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "user_count": 39,
+      "avg_artists": 1357.4102564102564,
+      "avg_listens": 76521.02564102564,
+      "avg_listens_per_artist": 240.48662658469135,
+      "example_users": [
+        37429,
+        33179,
+        32526,
+        25912,
+        19632
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1447 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ListenBrainz Collaborative Filtering Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            h1, h2, h3 {
+                color: #2c3e50;
+            }
+            .section {
+                margin-bottom: 30px;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 20px;
+                clear: both;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-bottom: 20px;
+                font-size: 0.9em;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 6px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            /* Two-column layout for visualizations */
+            .visualization-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 15px;
+                margin: 15px 0;
+            }
+            /* Make visualizations smaller */
+            .visualization {
+                text-align: center;
+                width: calc(50% - 15px);
+                margin-bottom: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .visualization img {
+                max-width: 100%;
+                height: auto;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                object-fit: contain;
+            }
+            .visualization p {
+                font-size: 0.85em;
+                margin-top: 5px;
+            }
+            /* Full-width visualization when needed */
+            .visualization.full-width {
+                width: 100%;
+            }
+            .stats-box {
+                background-color: #f8f9fa;
+                border-radius: 5px;
+                padding: 15px;
+                margin-bottom: 20px;
+                width: calc(33.33% - 15px);
+                box-sizing: border-box;
+                float: left;
+                margin-right: 15px;
+            }
+            .stats-box h3 {
+                margin-top: 0;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 10px;
+                font-size: 1.1em;
+            }
+            .stats-box p {
+                font-size: 0.9em;
+                margin: 5px 0;
+            }
+            .executive-summary {
+                background-color: #f0f7ff;
+                border-left: 5px solid #3498db;
+                padding: 15px;
+                margin-bottom: 30px;
+                border-radius: 0 5px 5px 0;
+            }
+            /* New navigation bar style */
+            .navigation {
+                background-color: #2c3e50;
+                position: sticky;
+                top: 0;
+                padding: 10px 20px;
+                margin-bottom: 30px;
+                border-radius: 5px;
+                z-index: 100;
+            }
+            .navigation ul {
+                list-style-type: none;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 0;
+            }
+            .navigation li {
+                margin: 3px;
+                font-size: 0.9em;
+            }
+            .navigation a {
+                display: inline-block;
+                padding: 4px 8px;
+                background-color: #34495e;
+                border-radius: 3px;
+                text-decoration: none;
+                color: #fff;
+                transition: background-color 0.2s;
+            }
+            .navigation a:hover {
+                background-color: #3498db;
+            }
+            .stats-summary {
+                background-color: #f5f5f5;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                border-left: 4px solid #3498db;
+            }
+            .highlighted-stat {
+                font-size: 1.2em;
+                color: #e74c3c;
+                font-weight: bold;
+            }
+            .two-column {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .two-column > div {
+                width: calc(50% - 10px);
+            }
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            footer {
+                margin-top: 30px;
+                padding-top: 10px;
+                border-top: 1px solid #eee;
+                text-align: center;
+                font-size: 0.8em;
+                color: #777;
+            }
+            /* Responsive design */
+            @media (max-width: 768px) {
+                .stats-box, .visualization, .two-column > div {
+                    width: 100%;
+                    margin-right: 0;
+                    float: none;
+                }
+                table {
+                    font-size: 0.8em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>ListenBrainz Collaborative Filtering Report</h1>
+        <p>Generated on 2025-03-01 01:24:29</p>
+        
+        <!-- Executive Summary -->
+        <div class="executive-summary">
+            <h2>Executive Summary</h2>
+            <p>This report analyzes the ListenBrainz collaborative filtering model applied to a dataset of <strong>15,782</strong> 
+            users and <strong>716,347</strong> artists, with approximately <strong>74,959,322</strong> total listens.</p>
+            
+            <p>Key findings:</p>
+            <ul>
+                <li>The average user listens to <strong>513</strong> different artists with <strong>4750</strong> total listens</li>
+                <li>The most popular artist (Taylor Swift) has <strong>479,340</strong> listens from <strong>3,815</strong> unique users</li>
+                <li>Artist recommendations show strong genre clustering and musical similarity patterns</li>
+            </ul>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="navigation">
+            <ul>
+                <li><a href="#dataset-summary">Dataset Overview</a></li>
+                <li><a href="#data-quality">Data Quality</a></li>
+                <li><a href="#artist-distribution">Artist Distribution</a></li>
+                <li><a href="#user-listening">User Patterns</a></li>
+                <li><a href="#user-segments">User Segments</a></li>
+                <li><a href="#artist-diversity">Artist Diversity</a></li>
+                <li><a href="#time-analysis">Time Analysis</a></li>
+                <li><a href="#artist-recommendations">Recommendations</a></li>
+                <li><a href="#artist-network">Artist Network</a></li>
+                <li><a href="#lastfm-comparison">Last.fm Comparison</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </div>
+        
+        <!-- 1. DATASET OVERVIEW -->
+        <div class="section" id="dataset-summary">
+            <h2>Dataset Overview</h2>
+            <div class="clearfix">
+                <div class="stats-box">
+                    <h3>User Statistics</h3>
+                    <p><strong>Total Users:</strong> 15,782</p>
+                    <p><strong>Avg. Listens per User:</strong> 4749.67</p>
+                    <p><strong>Avg. Artists per User:</strong> 512.87</p>
+                </div>
+                
+                <div class="stats-box">
+                    <h3>Artist Statistics</h3>
+                    <p><strong>Total Artists:</strong> 716,347</p>
+                    <p><strong>Avg. Users per Artist:</strong> 11.30</p>
+                </div>
+                
+                <div class="stats-box">
+                    <h3>Overall Statistics</h3>
+                    <p><strong>Total Entries:</strong> 8,094,055</p>
+                    <p><strong>Total Listens:</strong> 74,959,322</p>
+                </div>
+            </div>
+            
+            <div class="visualization full-width">
+                <img src="images/top_artists.png" alt="Top 20 Artists by Total Listens">
+                <p><em>Top 20 Artists by Total Listens</em></p>
+            </div>
+
+            <h3>Top Artists by Listen Count</h3>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Artist</th>
+                    <th>Total Listens</th>
+                    <th>Unique Listeners</th>
+                </tr>
+    
+                <tr>
+                    <td>1</td>
+                    <td>Taylor Swift</td>
+                    <td>479,340</td>
+                    <td>3,815</td>
+                </tr>
+        
+                <tr>
+                    <td>2</td>
+                    <td>Linkin Park</td>
+                    <td>280,773</td>
+                    <td>4,350</td>
+                </tr>
+        
+                <tr>
+                    <td>3</td>
+                    <td>Charli xcx</td>
+                    <td>269,405</td>
+                    <td>3,012</td>
+                </tr>
+        
+                <tr>
+                    <td>4</td>
+                    <td>Radiohead</td>
+                    <td>233,205</td>
+                    <td>4,570</td>
+                </tr>
+        
+                <tr>
+                    <td>5</td>
+                    <td>Kendrick Lamar</td>
+                    <td>174,918</td>
+                    <td>3,199</td>
+                </tr>
+        
+                <tr>
+                    <td>6</td>
+                    <td>Ariana Grande</td>
+                    <td>169,426</td>
+                    <td>2,597</td>
+                </tr>
+        
+                <tr>
+                    <td>7</td>
+                    <td>Billie Eilish</td>
+                    <td>161,542</td>
+                    <td>3,850</td>
+                </tr>
+        
+                <tr>
+                    <td>8</td>
+                    <td>The Beatles</td>
+                    <td>160,910</td>
+                    <td>3,757</td>
+                </tr>
+        
+                <tr>
+                    <td>9</td>
+                    <td>aespa</td>
+                    <td>158,965</td>
+                    <td>825</td>
+                </tr>
+        
+                <tr>
+                    <td>10</td>
+                    <td>Ye</td>
+                    <td>149,967</td>
+                    <td>2,465</td>
+                </tr>
+        
+                <tr>
+                    <td>11</td>
+                    <td>Pink Floyd</td>
+                    <td>122,698</td>
+                    <td>3,623</td>
+                </tr>
+        
+                <tr>
+                    <td>12</td>
+                    <td>Lana Del Rey</td>
+                    <td>118,374</td>
+                    <td>2,840</td>
+                </tr>
+        
+                <tr>
+                    <td>13</td>
+                    <td>twenty one pilots</td>
+                    <td>115,222</td>
+                    <td>2,646</td>
+                </tr>
+        
+                <tr>
+                    <td>14</td>
+                    <td>David Bowie</td>
+                    <td>114,536</td>
+                    <td>3,493</td>
+                </tr>
+        
+                <tr>
+                    <td>15</td>
+                    <td>Green Day</td>
+                    <td>110,132</td>
+                    <td>3,778</td>
+                </tr>
+        
+                <tr>
+                    <td>16</td>
+                    <td>Dua Lipa</td>
+                    <td>109,786</td>
+                    <td>3,072</td>
+                </tr>
+        
+                <tr>
+                    <td>17</td>
+                    <td>Sabrina Carpenter</td>
+                    <td>109,589</td>
+                    <td>2,490</td>
+                </tr>
+        
+                <tr>
+                    <td>18</td>
+                    <td>Carly Rae Jepsen</td>
+                    <td>107,141</td>
+                    <td>1,743</td>
+                </tr>
+        
+                <tr>
+                    <td>19</td>
+                    <td>System of a Down</td>
+                    <td>103,050</td>
+                    <td>3,219</td>
+                </tr>
+        
+                <tr>
+                    <td>20</td>
+                    <td>The Cure</td>
+                    <td>102,208</td>
+                    <td>3,207</td>
+                </tr>
+        
+            </table>
+        </div>
+        
+        <!-- 2. DATA QUALITY -->
+        <div class="section" id="data-quality">
+            <h2>Data Quality Analysis</h2>
+            <p>This section analyzes the quality of the dataset and mapping processes.</p>
+    
+                <div class="stats-summary">
+                    <p>Data mapping quality metrics:</p>
+                    <ul>
+                        <li><strong>79.9%</strong> of MSIDs were successfully mapped to MBIDs (74,959,322 artists)</li>
+                        <li><strong>20.1%</strong> of MSIDs could not be mapped (18,899,717 artists)</li>
+                        <li>Total artists processed: <strong>93,859,039</strong></li>
+                        <li>Overall mapping quality score: <strong>79.9</strong></li>
+                    </ul>
+                </div>
+            
+        </div>
+        
+        <!-- 3. ARTIST DISTRIBUTION -->
+        <div class="section" id="artist-distribution">
+            <h2>Artist Listener Distribution</h2>
+            <p>This section analyzes how listeners are distributed across artists, revealing the "long tail" pattern
+            characteristic of music consumption.</p>
+    
+            <div class="stats-summary">
+                <p>Of the <strong>716,347</strong> artists in the dataset:</p>
+                <ul>
+                    <li><span class="highlighted-stat">41.9%</span> have only one listener</li>
+                    <li>The median artist has <strong>2</strong> listeners</li>
+                    <li>Only <strong>1.8%</strong> of artists have more than 100 listeners</li>
+                </ul>
+            </div>
+        
+            <div class="visualization-container">
+    
+                <div class="visualization">
+                    <img src="images/artist_listener_segments.png" alt="Artist Listener Segments">
+                    <p><em>Distribution of artists by listener count ranges</em></p>
+                </div>
+        
+                <div class="visualization">
+                    <img src="images/artist_listener_buckets.png" alt="Artist Listener Buckets">
+                    <p><em>Number of artists in each listener count range (log scale)</em></p>
+                </div>
+        
+                <div class="visualization">
+                    <img src="images/artist_listener_histogram.png" alt="Artist Listener Distribution">
+                    <p><em>Detailed distribution of artists by listener count</em></p>
+                </div>
+        
+                <div class="visualization">
+                    <img src="images/artist_listener_cumulative.png" alt="Artist Listener Cumulative Distribution">
+                    <p><em>Cumulative percentage of artists by listener count</em></p>
+                </div>
+        
+            </div>
+            
+            <h3>Implications for Recommendations</h3>
+            <p>This long-tail distribution has significant implications for the recommendation system:</p>
+            <ul>
+                <li><strong>Cold start problem:</strong> Many artists have very few listeners, making it challenging to generate reliable recommendations for them.</li>
+                <li><strong>Data sparsity:</strong> The user-artist matrix is extremely sparse, with most artists having very few listeners.</li>
+                <li><strong>Popularity bias:</strong> Recommendations may be biased towards popular artists with many listeners.</li>
+            </ul>
+        </div>
+        
+        <!-- 4. USER LISTENING PATTERNS -->
+        <div class="section" id="user-listening">
+            <h2>User Listening Patterns</h2>
+            <p>The visualizations below show different aspects of user engagement and listening patterns.</p>
+            
+            <div class="visualization-container">
+    
+                <div class="visualization">
+                    <img src="images/user_listen_distribution.png" alt="Distribution of Listen Counts">
+                    <p><em>Distribution of total listen counts across users</em></p>
+                </div>
+        
+            </div>
+            
+            <div class="visualization-container">
+    
+                <div class="visualization full-width">
+                    <img src="images/top_users_comparison.png" alt="Top Users Comparison">
+                    <p><em>Listen counts and artist-to-listen ratios for top users</em></p>
+                </div>
+        
+            </div>
+        </div>
+        
+        <!-- 5. USER SEGMENTS -->
+    
+        <div class="section" id="user-segments">
+            <h2>User Segmentation Analysis</h2>
+            <p>Users have been clustered into distinct segments based on their listening behavior. 
+            These segments represent different types of music consumers with unique characteristics.</p>
+            
+            <div class="visualization-container">
+        
+                <div class="visualization">
+                    <img src="images/user_segments_scatter.png" alt="User Segments Scatter Plot">
+                    <p><em>User clusters based on listening diversity and volume</em></p>
+                </div>
+            
+                <div class="visualization">
+                    <img src="images/user_segments_characteristics.png" alt="User Segment Characteristics">
+                    <p><em>Characteristics of each identified user segment</em></p>
+                </div>
+            
+            </div>
+        
+                    <h3>Segment Descriptions</h3>
+                    <div class="clearfix">
+                    
+                        <div class="stats-box">
+                            <h3>Casual Listeners</h3>
+                            <p>The majority group with moderate artist diversity but lower overall listening time.</p>
+                            <p><strong>Users:</strong> 1,622</p>
+                            <p><strong>Avg. Artists:</strong> 2014.5</p>
+                            <p><strong>Avg. Listens:</strong> 23390.8</p>
+                        </div>
+                        
+                        <div class="stats-box">
+                            <h3>Power Users</h3>
+                            <p>A small group of highly engaged users with extremely high listen counts and strong artist loyalty.</p>
+                            <p><strong>Users:</strong> 12,495</p>
+                            <p><strong>Avg. Artists:</strong> 381.7</p>
+                            <p><strong>Avg. Listens:</strong> 2721.9</p>
+                        </div>
+                        
+                        <div class="stats-box">
+                            <h3>Explorers</h3>
+                            <p>Users who discover and listen to many different artists with good overall engagement.</p>
+                            <p><strong>Users:</strong> 39</p>
+                            <p><strong>Avg. Artists:</strong> 1357.4</p>
+                            <p><strong>Avg. Listens:</strong> 76521.0</p>
+                        </div>
+                        
+                    </div>
+                    
+        </div>
+        
+        <div class="section" id="artist-diversity">
+            <h2>Artist Diversity Analysis</h2>
+            <div class="visualization-container">
+    
+                <div class="visualization">
+                    <img src="images/country_distribution.png" alt="Country Distribution of Top Artists">
+                    <p><em>Country distribution of top artists</em></p>
+                </div>
+    
+                <div class="visualization">
+                    <img src="images/genre_distribution.png" alt="Genre Distribution of Top Artists">
+                    <p><em>Genre distribution of top artists</em></p>
+                </div>
+    
+            </div>
+        </div>
+        
+        <!-- 7. TIME PERIOD ANALYSIS -->
+        <div class="section" id="time-analysis">
+            <h2>Artist Time Period Analysis</h2>
+            <p>This analysis shows the time period distribution of top artists in the dataset.</p>
+            
+            <div class="visualization">
+                <img src="images/artist_decades.png" alt="Time Period Distribution of Top Artists">
+                <p><em>Distribution of top artists by decade they started their career</em></p>
+            </div>
+            
+            <p>The distribution shows when the most popular artists in the dataset began their careers.
+            This can indicate potential biases in the dataset towards certain eras of music.</p>
+        </div>
+        
+        <!-- 8. ARTIST RECOMMENDATIONS -->
+        <div class="section" id="artist-recommendations">
+            <h2>Artist Recommendations</h2>
+            <p>The collaborative filtering model generates artist recommendations based on listening patterns.</p>
+    
+            <div class="two-column">
+        
+                <div>
+                <h3>Artists similar to Foo_Fighters</h3>
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Artist</th>
+                        <th>Score</th>
+                    </tr>
+            
+                    <tr>
+                        <td>2</td>
+                        <td>Red Hot Chili Peppers</td>
+                        <td>0.9940</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td>Nirvana</td>
+                        <td>0.9907</td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td>Weezer</td>
+                        <td>0.9904</td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td>System of a Down</td>
+                        <td>0.9903</td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td>Green Day</td>
+                        <td>0.9893</td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td>Muse</td>
+                        <td>0.9888</td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td>Rage Against the Machine</td>
+                        <td>0.9885</td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td>Pearl Jam</td>
+                        <td>0.9882</td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td>The Offspring</td>
+                        <td>0.9876</td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td>blink‐182</td>
+                        <td>0.9875</td>
+                    </tr>
+                
+                </table>
+                </div>
+            
+                <div>
+                <h3>Artists similar to Timecop1983</h3>
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Artist</th>
+                        <th>Score</th>
+                    </tr>
+            
+                    <tr>
+                        <td>2</td>
+                        <td>Miami Nights 1984</td>
+                        <td>0.9063</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td>The Midnight</td>
+                        <td>0.8997</td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td>Wice</td>
+                        <td>0.8965</td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td>Kalax</td>
+                        <td>0.8739</td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td>Neon Nox</td>
+                        <td>0.8691</td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td>Waveshaper</td>
+                        <td>0.8653</td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td>Dynatron</td>
+                        <td>0.8648</td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td>GUNSHIP</td>
+                        <td>0.8639</td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td>Mitch Murder</td>
+                        <td>0.8586</td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td>Le Matos</td>
+                        <td>0.8517</td>
+                    </tr>
+                
+                </table>
+                </div>
+            
+                <div>
+                <h3>Artists similar to Yumi_Zouma</h3>
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Artist</th>
+                        <th>Score</th>
+                    </tr>
+            
+                    <tr>
+                        <td>2</td>
+                        <td>Hazel English</td>
+                        <td>0.8823</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td>Tennis</td>
+                        <td>0.8467</td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td>Barrie</td>
+                        <td>0.8386</td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td>Caroline Rose</td>
+                        <td>0.8376</td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td>Blood Orange</td>
+                        <td>0.8291</td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td>Fazerdaze</td>
+                        <td>0.8264</td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td>Mr Little Jeans</td>
+                        <td>0.8254</td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td>Night Tapes</td>
+                        <td>0.8221</td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td>Rhye</td>
+                        <td>0.8220</td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td>Soccer Mommy</td>
+                        <td>0.8196</td>
+                    </tr>
+                
+                </table>
+                </div>
+            
+                <div>
+                <h3>Artists similar to The_Midnight</h3>
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Artist</th>
+                        <th>Score</th>
+                    </tr>
+            
+                    <tr>
+                        <td>2</td>
+                        <td>Timecop1983</td>
+                        <td>0.8997</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td>CHVRCHES</td>
+                        <td>0.8735</td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td>Waveshaper</td>
+                        <td>0.8692</td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td>Carpenter Brut</td>
+                        <td>0.8606</td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td>Miami Nights 1984</td>
+                        <td>0.8584</td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td>M83</td>
+                        <td>0.8569</td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td>Kavinsky</td>
+                        <td>0.8566</td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td>GUNSHIP</td>
+                        <td>0.8557</td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td>Mitch Murder</td>
+                        <td>0.8555</td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td>Purity Ring</td>
+                        <td>0.8488</td>
+                    </tr>
+                
+                </table>
+                </div>
+            
+                <div>
+                <h3>Artists similar to Radiohead</h3>
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Artist</th>
+                        <th>Score</th>
+                    </tr>
+            
+                    <tr>
+                        <td>2</td>
+                        <td>Nirvana</td>
+                        <td>0.9936</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td>Pink Floyd</td>
+                        <td>0.9917</td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td>Daft Punk</td>
+                        <td>0.9914</td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td>Red Hot Chili Peppers</td>
+                        <td>0.9904</td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td>Muse</td>
+                        <td>0.9897</td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td>The Beatles</td>
+                        <td>0.9892</td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td>Green Day</td>
+                        <td>0.9888</td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td>Gorillaz</td>
+                        <td>0.9884</td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td>David Bowie</td>
+                        <td>0.9879</td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td>Arctic Monkeys</td>
+                        <td>0.9877</td>
+                    </tr>
+                
+                </table>
+                </div>
+            
+                <div>
+                <h3>Artists similar to Muse</h3>
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Artist</th>
+                        <th>Score</th>
+                    </tr>
+            
+                    <tr>
+                        <td>2</td>
+                        <td>Red Hot Chili Peppers</td>
+                        <td>0.9942</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td>Green Day</td>
+                        <td>0.9934</td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td>System of a Down</td>
+                        <td>0.9904</td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td>Daft Punk</td>
+                        <td>0.9904</td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td>Nirvana</td>
+                        <td>0.9901</td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td>Linkin Park</td>
+                        <td>0.9899</td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td>Radiohead</td>
+                        <td>0.9897</td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td>Arctic Monkeys</td>
+                        <td>0.9891</td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td>Foo Fighters</td>
+                        <td>0.9888</td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td>Queen</td>
+                        <td>0.9887</td>
+                    </tr>
+                
+                </table>
+                </div>
+            
+                <div>
+                <h3>Artists similar to Steven_Wilson</h3>
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Artist</th>
+                        <th>Score</th>
+                    </tr>
+            
+                    <tr>
+                        <td>2</td>
+                        <td>The Pineapple Thief</td>
+                        <td>0.8998</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td>Porcupine Tree</td>
+                        <td>0.8709</td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td>Dream Theater</td>
+                        <td>0.8095</td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td>Unknown Artist</td>
+                        <td>0.8055</td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td>Riverside</td>
+                        <td>0.8054</td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td>Rush</td>
+                        <td>0.8051</td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td>Marillion</td>
+                        <td>0.8051</td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td>Leprous</td>
+                        <td>0.8033</td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td>Opeth</td>
+                        <td>0.8033</td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td>Anathema</td>
+                        <td>0.8021</td>
+                    </tr>
+                
+                </table>
+                </div>
+            
+                <div>
+                <h3>Artists similar to The_Pineapple_Thief</h3>
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Artist</th>
+                        <th>Score</th>
+                    </tr>
+            
+                    <tr>
+                        <td>2</td>
+                        <td>Steven Wilson</td>
+                        <td>0.8998</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td>Riverside</td>
+                        <td>0.8858</td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td>Soen</td>
+                        <td>0.8438</td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td>VOLA</td>
+                        <td>0.8320</td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td>Pure Reason Revolution</td>
+                        <td>0.8284</td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td>Unknown Artist</td>
+                        <td>0.8263</td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td>Blackfield</td>
+                        <td>0.8260</td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td>Gazpacho</td>
+                        <td>0.8111</td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td>Lunatic Soul</td>
+                        <td>0.8066</td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td>Pain of Salvation</td>
+                        <td>0.7971</td>
+                    </tr>
+                
+                </table>
+                </div>
+            
+                <div>
+                <h3>Artists similar to Nirvana</h3>
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Artist</th>
+                        <th>Score</th>
+                    </tr>
+            
+                    <tr>
+                        <td>2</td>
+                        <td>Red Hot Chili Peppers</td>
+                        <td>0.9956</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td>Radiohead</td>
+                        <td>0.9936</td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td>System of a Down</td>
+                        <td>0.9934</td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td>Green Day</td>
+                        <td>0.9929</td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td>Pink Floyd</td>
+                        <td>0.9921</td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td>Metallica</td>
+                        <td>0.9907</td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td>Foo Fighters</td>
+                        <td>0.9907</td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td>Muse</td>
+                        <td>0.9901</td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td>The Beatles</td>
+                        <td>0.9895</td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td>Daft Punk</td>
+                        <td>0.9888</td>
+                    </tr>
+                
+                </table>
+                </div>
+            
+                <div>
+                <h3>Artists similar to Tycho</h3>
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Artist</th>
+                        <th>Score</th>
+                    </tr>
+            
+                    <tr>
+                        <td>2</td>
+                        <td>Bonobo</td>
+                        <td>0.9571</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td>Four Tet</td>
+                        <td>0.9403</td>
+                    </tr>
+                
+                    <tr>
+                        <td>4</td>
+                        <td>M83</td>
+                        <td>0.9312</td>
+                    </tr>
+                
+                    <tr>
+                        <td>5</td>
+                        <td>Jamie xx</td>
+                        <td>0.9302</td>
+                    </tr>
+                
+                    <tr>
+                        <td>6</td>
+                        <td>Boards of Canada</td>
+                        <td>0.9289</td>
+                    </tr>
+                
+                    <tr>
+                        <td>7</td>
+                        <td>Röyksopp</td>
+                        <td>0.9277</td>
+                    </tr>
+                
+                    <tr>
+                        <td>8</td>
+                        <td>Caribou</td>
+                        <td>0.9271</td>
+                    </tr>
+                
+                    <tr>
+                        <td>9</td>
+                        <td>Khruangbin</td>
+                        <td>0.9267</td>
+                    </tr>
+                
+                    <tr>
+                        <td>10</td>
+                        <td>The xx</td>
+                        <td>0.9262</td>
+                    </tr>
+                
+                    <tr>
+                        <td>11</td>
+                        <td>DJ Shadow</td>
+                        <td>0.9219</td>
+                    </tr>
+                
+                </table>
+                </div>
+            
+            </div>
+        
+        </div>
+        
+        <!-- 9. ARTIST NETWORK -->
+    
+        <div class="section" id="artist-network">
+            <h2>Artist Relationship Network</h2>
+            <p>The network visualization below shows relationships between artists based on similarity scores.
+            Connected artists are frequently listened to by the same users.</p>
+            
+            <div class="visualization full-width">
+                <img src="images/artist_network.png" alt="Artist Relationship Network">
+                <p><em>Network graph showing artist relationships based on listener overlap. 
+                Clusters indicate genres or musical styles.</em></p>
+            </div>
+            
+            <div class="two-column">
+                <div>
+                    <h3>Network Insights</h3>
+                    <ul>
+                        <li><strong>Central Connectors:</strong> Artists that bridge multiple musical styles</li>
+                        <li><strong>Tight Clusters:</strong> Genre-specific communities with high internal similarity</li>
+                        <li><strong>Isolated Nodes:</strong> Unique artists with distinctive audiences</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Network Applications</h3>
+                    <ul>
+                        <li><strong>Discovery:</strong> Finding bridge artists that connect different genres</li>
+                        <li><strong>Recommendations:</strong> Identifying similar artists within clusters</li>
+                        <li><strong>Genre Mapping:</strong> Automatically detecting music genres from listening patterns</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" id="lastfm-comparison">
+            <h2>Comparison with Last.fm</h2>
+            <p>This section compares the collaborative filtering model's recommendations 
+            with those from Last.fm, a popular music service.</p>
+            
+            <div class="visualization">
+                <img src="images/lastfm_overlap.png" alt="Overlap Between Model and Last.fm Recommendations">
+                <p><em>Overlap percentage between our model and Last.fm recommendations</em></p>
+            </div>
+    
+            <p>The model's recommendations have an average overlap of <strong>28.00%</strong> 
+            with Last.fm's recommendations for the same artists.</p>
+            
+            <h3>Detailed Comparison</h3>
+            <table>
+                <tr>
+                    <th>Artist</th>
+                    <th>Overlap %</th>
+                    <th>Common Recommendations</th>
+                </tr>
+            
+                <tr>
+                    <td>The Pineapple Thief</td>
+                    <td>60.00%</td>
+                    <td>Steven Wilson, Riverside, Gazpacho, Blackfield, Pure Reason Revolution</td>
+                </tr>
+                
+                <tr>
+                    <td>Foo Fighters</td>
+                    <td>30.00%</td>
+                    <td>Nirvana, Red Hot Chili Peppers, Pearl Jam</td>
+                </tr>
+                
+                <tr>
+                    <td>Alvvays</td>
+                    <td>10.00%</td>
+                    <td>Beach House</td>
+                </tr>
+                
+                <tr>
+                    <td>Timecop1983</td>
+                    <td>40.00%</td>
+                    <td>Kalax, Neon Nox, Miami Nights 1984, The Midnight</td>
+                </tr>
+                
+                <tr>
+                    <td>Yumi Zouma</td>
+                    <td>30.00%</td>
+                    <td>Hazel English, Fazerdaze, Barrie</td>
+                </tr>
+                
+                <tr>
+                    <td>Emancipator</td>
+                    <td>30.00%</td>
+                    <td>Bonobo, Little People, Tycho</td>
+                </tr>
+                
+                <tr>
+                    <td>Nirvana</td>
+                    <td>10.00%</td>
+                    <td>Foo Fighters</td>
+                </tr>
+                
+                <tr>
+                    <td>Men I Trust</td>
+                    <td>30.00%</td>
+                    <td>Crumb, Clairo, The Marías</td>
+                </tr>
+                
+                <tr>
+                    <td>Steven Wilson</td>
+                    <td>30.00%</td>
+                    <td>The Pineapple Thief, Riverside, Porcupine Tree</td>
+                </tr>
+                
+                <tr>
+                    <td>Tycho</td>
+                    <td>10.00%</td>
+                    <td>Bonobo</td>
+                </tr>
+                
+            </table>
+            
+        </div>
+        
+        <!-- 11. CONCLUSION -->
+        <div class="section" id="conclusion">
+            <h2>Conclusion</h2>
+            <p>The collaborative filtering model successfully identifies relationships between artists based on user listening patterns.
+            The recommendations appear to match general musical similarity and could be used for artist discovery.</p>
+            
+            <h3>Key Findings</h3>
+            <ul>
+                <li>There is a diverse range of artists in the dataset, though certain countries and genres may be overrepresented.</li>
+                <li>The collaborative filtering approach appears to find meaningful similarities between artists.</li>
+                <li>User segmentation reveals distinct patterns of music consumption behavior.</li>
+                <li>Artist network analysis shows clear genre clusters with interesting bridges between musical styles.</li>
+            </ul>
+            
+            <h3>Limitations and Future Work</h3>
+            <ul>
+                <li>The dataset may contain biases toward certain genres or time periods</li>
+                <li>The collaborative filtering approach considers only listening counts, not contextual information</li>
+                <li>Future work could incorporate audio features or lyrical content analysis</li>
+                <li>A hybrid recommendation system combining collaborative filtering with content-based methods could improve results</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>Generated using ListenBrainz Collaborative Filtering.</p>
+        </footer>
+    </body>
+    </html>
+    

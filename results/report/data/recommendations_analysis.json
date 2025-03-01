@@ -1,0 +1,1668 @@
+[
+  {
+    "source_artist": "Foo_Fighters",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "8bfac288-ccc5-448d-9573-c33ea2aa5c30",
+        "artist_name": "Red Hot Chili Peppers",
+        "similarity_score": 0.9940185546875
+      },
+      {
+        "rank": 3,
+        "artist_id": "5b11f4ce-a62d-471e-81fc-a69a8278c7da",
+        "artist_name": "Nirvana",
+        "similarity_score": 0.9906708002090454
+      },
+      {
+        "rank": 4,
+        "artist_id": "6fe07aa5-fec0-4eca-a456-f29bff451b04",
+        "artist_name": "Weezer",
+        "similarity_score": 0.9903844594955444
+      },
+      {
+        "rank": 5,
+        "artist_id": "cc0b7089-c08d-4c10-b6b0-873582c17fd6",
+        "artist_name": "System of a Down",
+        "similarity_score": 0.9902799129486084
+      },
+      {
+        "rank": 6,
+        "artist_id": "084308bd-1654-436f-ba03-df6697104e19",
+        "artist_name": "Green Day",
+        "similarity_score": 0.989288866519928
+      },
+      {
+        "rank": 7,
+        "artist_id": "9c9f1380-2516-4fc9-a3e6-f9f61941d090",
+        "artist_name": "Muse",
+        "similarity_score": 0.9888200759887695
+      },
+      {
+        "rank": 8,
+        "artist_id": "3798b104-01cb-484c-a3b0-56adc6399b80",
+        "artist_name": "Rage Against the Machine",
+        "similarity_score": 0.9885055422782898
+      },
+      {
+        "rank": 9,
+        "artist_id": "83b9cbe7-9857-49e2-ab8e-b57b01038103",
+        "artist_name": "Pearl Jam",
+        "similarity_score": 0.9881572723388672
+      },
+      {
+        "rank": 10,
+        "artist_id": "23a03e33-a603-404e-bcbf-2c00159d7067",
+        "artist_name": "The Offspring",
+        "similarity_score": 0.9876055121421814
+      },
+      {
+        "rank": 11,
+        "artist_id": "0743b15a-3c32-48c8-ad58-cb325350befa",
+        "artist_name": "blink\u2010182",
+        "similarity_score": 0.9875425696372986
+      },
+      {
+        "rank": 12,
+        "artist_id": "95e1ead9-4d31-4808-a7ac-32c3614c116b",
+        "artist_name": "The Killers",
+        "similarity_score": 0.9869959950447083
+      },
+      {
+        "rank": 13,
+        "artist_id": "11ae9fbb-f3d7-4a47-936f-4c0a04d3b3b5",
+        "artist_name": "The White Stripes",
+        "similarity_score": 0.9863759279251099
+      },
+      {
+        "rank": 14,
+        "artist_id": "e21857d5-3256-4547-afb3-4b6ded592596",
+        "artist_name": "Gorillaz",
+        "similarity_score": 0.9857779145240784
+      },
+      {
+        "rank": 15,
+        "artist_id": "39ab1aed-75e0-4140-bd47-540276886b60",
+        "artist_name": "Oasis",
+        "similarity_score": 0.98484206199646
+      },
+      {
+        "rank": 16,
+        "artist_id": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+        "artist_name": "Metallica",
+        "similarity_score": 0.9846707582473755
+      },
+      {
+        "rank": 17,
+        "artist_id": "ada7a83c-e3e1-40f1-93f9-3e73dbc9298a",
+        "artist_name": "Arctic Monkeys",
+        "similarity_score": 0.9846270084381104
+      },
+      {
+        "rank": 18,
+        "artist_id": "7dc8f5bd-9d0b-4087-9f73-dc164950bbd8",
+        "artist_name": "Queens of the Stone Age",
+        "similarity_score": 0.9845165610313416
+      },
+      {
+        "rank": 19,
+        "artist_id": "a74b1b7f-71a5-4011-9441-d0b5e4122711",
+        "artist_name": "Radiohead",
+        "similarity_score": 0.9838539958000183
+      },
+      {
+        "rank": 20,
+        "artist_id": "ba0d6274-db14-4ef5-b28d-657ebde1a396",
+        "artist_name": "The Smashing Pumpkins",
+        "similarity_score": 0.9820413589477539
+      }
+    ]
+  },
+  {
+    "source_artist": "Timecop1983",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "f7162d10-a087-46db-b6c8-6021d9c2bf4d",
+        "artist_name": "Miami Nights 1984",
+        "similarity_score": 0.9062638878822327
+      },
+      {
+        "rank": 3,
+        "artist_id": "46eb0fb7-9725-43af-97d7-6c717682a799",
+        "artist_name": "The Midnight",
+        "similarity_score": 0.8997469544410706
+      },
+      {
+        "rank": 4,
+        "artist_id": "e293b522-0bea-4dd6-af95-db0f9649293f",
+        "artist_name": "Wice",
+        "similarity_score": 0.8964709639549255
+      },
+      {
+        "rank": 5,
+        "artist_id": "74d78e57-96fd-408f-bccd-12dfdb8a0176",
+        "artist_name": "Kalax",
+        "similarity_score": 0.8739119172096252
+      },
+      {
+        "rank": 6,
+        "artist_id": "6bf781e5-b984-4b0a-8373-466aa49e1f27",
+        "artist_name": "Neon Nox",
+        "similarity_score": 0.8690768480300903
+      },
+      {
+        "rank": 7,
+        "artist_id": "571fb58d-b957-4cfc-8c7d-5cbf13519227",
+        "artist_name": "Waveshaper",
+        "similarity_score": 0.8652981519699097
+      },
+      {
+        "rank": 8,
+        "artist_id": "cf4eab9f-c584-48eb-b115-5b3148535ab9",
+        "artist_name": "Dynatron",
+        "similarity_score": 0.8648243546485901
+      },
+      {
+        "rank": 9,
+        "artist_id": "df1356d3-3c66-48bc-ac79-475c6cf76266",
+        "artist_name": "GUNSHIP",
+        "similarity_score": 0.8639014959335327
+      },
+      {
+        "rank": 10,
+        "artist_id": "5a2b9dd6-b605-4f90-9b08-fa4f54e40330",
+        "artist_name": "Mitch Murder",
+        "similarity_score": 0.8586026430130005
+      },
+      {
+        "rank": 11,
+        "artist_id": "516b7171-d5dd-4fe4-9649-ca90cc3a755f",
+        "artist_name": "Le Matos",
+        "similarity_score": 0.8516561388969421
+      },
+      {
+        "rank": 12,
+        "artist_id": "4fbf6628-e839-457d-b989-fa1ad535ff9d",
+        "artist_name": "Droid Bishop",
+        "similarity_score": 0.8468986749649048
+      },
+      {
+        "rank": 13,
+        "artist_id": "cf51b298-c8c1-4480-951b-2a4740693518",
+        "artist_name": "W O L F C L U B",
+        "similarity_score": 0.8462620377540588
+      },
+      {
+        "rank": 14,
+        "artist_id": "20e17bb3-4b34-48d3-bc35-d8e6638e3b4d",
+        "artist_name": "Daniel Deluxe",
+        "similarity_score": 0.8423423767089844
+      },
+      {
+        "rank": 15,
+        "artist_id": "5e114cdf-10f8-4d0b-a974-4b86491b1c7e",
+        "artist_name": "Trevor Something",
+        "similarity_score": 0.841231644153595
+      },
+      {
+        "rank": 16,
+        "artist_id": "e342f708-9b62-42b9-a59a-9afff7620da0",
+        "artist_name": "Power Glove",
+        "similarity_score": 0.8395417332649231
+      },
+      {
+        "rank": 17,
+        "artist_id": "1bc76772-45fe-4f14-92b5-c4f9ff567fcf",
+        "artist_name": "FM-84",
+        "similarity_score": 0.8357887268066406
+      },
+      {
+        "rank": 18,
+        "artist_id": "3452247c-719a-4a77-8d98-bf55becb449a,dde73741-594c-4ec7-bc32-24e120dcc03d",
+        "artist_name": "Unknown Artist",
+        "similarity_score": 0.8303696513175964
+      },
+      {
+        "rank": 19,
+        "artist_id": "170ab39b-3863-45b4-89ef-13d019deaa4f",
+        "artist_name": "Scandroid",
+        "similarity_score": 0.8294851183891296
+      },
+      {
+        "rank": 20,
+        "artist_id": "b9e46d1a-9068-4615-9200-90b3d5eae68b",
+        "artist_name": "Lazerhawk",
+        "similarity_score": 0.8257026076316833
+      }
+    ]
+  },
+  {
+    "source_artist": "Yumi_Zouma",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "ef67a875-9e45-4057-b91d-56c4e744d901",
+        "artist_name": "Hazel English",
+        "similarity_score": 0.8823372721672058
+      },
+      {
+        "rank": 3,
+        "artist_id": "a8982cb0-7886-4e60-9f6a-3b71baa370e6",
+        "artist_name": "Tennis",
+        "similarity_score": 0.8467006683349609
+      },
+      {
+        "rank": 4,
+        "artist_id": "10ad0e36-3ac3-4f7f-a48c-4dd91a26ed6b",
+        "artist_name": "Barrie",
+        "similarity_score": 0.8385858535766602
+      },
+      {
+        "rank": 5,
+        "artist_id": "17862c0f-a9b1-46dd-b85d-7af965974afd",
+        "artist_name": "Caroline Rose",
+        "similarity_score": 0.837608814239502
+      },
+      {
+        "rank": 6,
+        "artist_id": "3d254f1e-7d18-431b-baeb-68e57695dfdb",
+        "artist_name": "Blood Orange",
+        "similarity_score": 0.8290747404098511
+      },
+      {
+        "rank": 7,
+        "artist_id": "d51ce0e4-027e-4ecf-a87e-c02a08149f42",
+        "artist_name": "Fazerdaze",
+        "similarity_score": 0.8263853192329407
+      },
+      {
+        "rank": 8,
+        "artist_id": "cd223739-863e-4094-b484-0f75e214857e",
+        "artist_name": "Mr Little Jeans",
+        "similarity_score": 0.825393795967102
+      },
+      {
+        "rank": 9,
+        "artist_id": "46c38a79-24c0-4902-9c69-13c1ef1da408",
+        "artist_name": "Night Tapes",
+        "similarity_score": 0.8221072554588318
+      },
+      {
+        "rank": 10,
+        "artist_id": "aa914efa-d6cb-4816-906f-8edafb08418e",
+        "artist_name": "Rhye",
+        "similarity_score": 0.8220404386520386
+      },
+      {
+        "rank": 11,
+        "artist_id": "84803b1d-dcb3-490d-9af5-debbba64a011",
+        "artist_name": "Soccer Mommy",
+        "similarity_score": 0.8195840716362
+      },
+      {
+        "rank": 12,
+        "artist_id": "6e8e3717-a62d-4a3f-886d-6a4e82507930",
+        "artist_name": "Arlo Parks",
+        "similarity_score": 0.8190410137176514
+      },
+      {
+        "rank": 13,
+        "artist_id": "2491939e-b112-4afd-8563-c1ab1ea27e1c",
+        "artist_name": "TOPS",
+        "similarity_score": 0.818020761013031
+      },
+      {
+        "rank": 14,
+        "artist_id": "4a18722d-5a98-41c8-9e86-814afbffc704",
+        "artist_name": "Youth Lagoon",
+        "similarity_score": 0.8179430365562439
+      },
+      {
+        "rank": 15,
+        "artist_id": "1bbf31dc-dbc0-4a7a-bf3f-48bc665878e1",
+        "artist_name": "Local Natives",
+        "similarity_score": 0.8169523477554321
+      },
+      {
+        "rank": 16,
+        "artist_id": "ea5493df-b8d9-4c89-bd5b-6c4aeba7a0ac",
+        "artist_name": "Still Corners",
+        "similarity_score": 0.8157286047935486
+      },
+      {
+        "rank": 17,
+        "artist_id": "3a17adde-9bc0-4d76-aa35-4fe8e46fbeec",
+        "artist_name": "Shura",
+        "similarity_score": 0.8134199380874634
+      },
+      {
+        "rank": 18,
+        "artist_id": "b618a5f3-085d-4966-887f-6d264c61524a",
+        "artist_name": "Biig Piig",
+        "similarity_score": 0.8124338388442993
+      },
+      {
+        "rank": 19,
+        "artist_id": "74a30f2a-dae6-4e99-8a75-cb0f93b31aa6",
+        "artist_name": "Washed Out",
+        "similarity_score": 0.8098337054252625
+      },
+      {
+        "rank": 20,
+        "artist_id": "5fdf9304-c5c8-499c-959f-81482251e387",
+        "artist_name": "Abby Sage",
+        "similarity_score": 0.8090381622314453
+      }
+    ]
+  },
+  {
+    "source_artist": "The_Midnight",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "3452247c-719a-4a77-8d98-bf55becb449a",
+        "artist_name": "Timecop1983",
+        "similarity_score": 0.8997470140457153
+      },
+      {
+        "rank": 3,
+        "artist_id": "6a93afbb-257f-4166-b389-9f2a1e5c5df8",
+        "artist_name": "CHVRCHES",
+        "similarity_score": 0.8734892010688782
+      },
+      {
+        "rank": 4,
+        "artist_id": "571fb58d-b957-4cfc-8c7d-5cbf13519227",
+        "artist_name": "Waveshaper",
+        "similarity_score": 0.8692255020141602
+      },
+      {
+        "rank": 5,
+        "artist_id": "303abdee-ffca-4685-a582-6aaaefd81b01",
+        "artist_name": "Carpenter Brut",
+        "similarity_score": 0.860599935054779
+      },
+      {
+        "rank": 6,
+        "artist_id": "f7162d10-a087-46db-b6c8-6021d9c2bf4d",
+        "artist_name": "Miami Nights 1984",
+        "similarity_score": 0.8584263324737549
+      },
+      {
+        "rank": 7,
+        "artist_id": "6d7b7cd4-254b-4c25-83f6-dd20f98ceacd",
+        "artist_name": "M83",
+        "similarity_score": 0.8568738698959351
+      },
+      {
+        "rank": 8,
+        "artist_id": "eb6de5f6-98f8-4b5a-bfdc-f87fa4936baa",
+        "artist_name": "Kavinsky",
+        "similarity_score": 0.8565507531166077
+      },
+      {
+        "rank": 9,
+        "artist_id": "df1356d3-3c66-48bc-ac79-475c6cf76266",
+        "artist_name": "GUNSHIP",
+        "similarity_score": 0.8557020425796509
+      },
+      {
+        "rank": 10,
+        "artist_id": "5a2b9dd6-b605-4f90-9b08-fa4f54e40330",
+        "artist_name": "Mitch Murder",
+        "similarity_score": 0.8555328249931335
+      },
+      {
+        "rank": 11,
+        "artist_id": "fdb53441-e5e6-4657-9aad-8dab672e1cdc",
+        "artist_name": "Purity Ring",
+        "similarity_score": 0.8488343954086304
+      },
+      {
+        "rank": 12,
+        "artist_id": "2bcf2e02-5bc3-4c76-bf76-41126cb11444",
+        "artist_name": "Ghost",
+        "similarity_score": 0.8400288820266724
+      },
+      {
+        "rank": 13,
+        "artist_id": "d7604213-38a4-4372-b682-16f9b831d3a8",
+        "artist_name": "HOME",
+        "similarity_score": 0.8395056128501892
+      },
+      {
+        "rank": 14,
+        "artist_id": "7e5a2a59-6d9f-4a17-b7c2-e1eedb7bd222",
+        "artist_name": "Grimes",
+        "similarity_score": 0.8389801979064941
+      },
+      {
+        "rank": 15,
+        "artist_id": "2e222fce-02ae-4221-b1c6-3c3242b423b6",
+        "artist_name": "ODESZA",
+        "similarity_score": 0.8388720750808716
+      },
+      {
+        "rank": 16,
+        "artist_id": "ac7e838c-3d95-47c2-92a9-81767ad7c217",
+        "artist_name": "Empire of the Sun",
+        "similarity_score": 0.8378905057907104
+      },
+      {
+        "rank": 17,
+        "artist_id": "4a00ec9d-c635-463a-8cd4-eb61725f0c60",
+        "artist_name": "deadmau5",
+        "similarity_score": 0.8353033065795898
+      },
+      {
+        "rank": 18,
+        "artist_id": "4449ccf6-c948-4d33-aa97-b6ad98ce4b5b",
+        "artist_name": "Metric",
+        "similarity_score": 0.8325764536857605
+      },
+      {
+        "rank": 19,
+        "artist_id": "e6de1f3b-6484-491c-88dd-6d619f142abc",
+        "artist_name": "Hans Zimmer",
+        "similarity_score": 0.8312640190124512
+      },
+      {
+        "rank": 20,
+        "artist_id": "5e114cdf-10f8-4d0b-a974-4b86491b1c7e",
+        "artist_name": "Trevor Something",
+        "similarity_score": 0.830436110496521
+      }
+    ]
+  },
+  {
+    "source_artist": "Radiohead",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "5b11f4ce-a62d-471e-81fc-a69a8278c7da",
+        "artist_name": "Nirvana",
+        "similarity_score": 0.9936309456825256
+      },
+      {
+        "rank": 3,
+        "artist_id": "83d91898-7763-47d7-b03b-b92132375c47",
+        "artist_name": "Pink Floyd",
+        "similarity_score": 0.9917091727256775
+      },
+      {
+        "rank": 4,
+        "artist_id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+        "artist_name": "Daft Punk",
+        "similarity_score": 0.9913821816444397
+      },
+      {
+        "rank": 5,
+        "artist_id": "8bfac288-ccc5-448d-9573-c33ea2aa5c30",
+        "artist_name": "Red Hot Chili Peppers",
+        "similarity_score": 0.9904429912567139
+      },
+      {
+        "rank": 6,
+        "artist_id": "9c9f1380-2516-4fc9-a3e6-f9f61941d090",
+        "artist_name": "Muse",
+        "similarity_score": 0.9897072911262512
+      },
+      {
+        "rank": 7,
+        "artist_id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+        "artist_name": "The Beatles",
+        "similarity_score": 0.9892460703849792
+      },
+      {
+        "rank": 8,
+        "artist_id": "084308bd-1654-436f-ba03-df6697104e19",
+        "artist_name": "Green Day",
+        "similarity_score": 0.9887806177139282
+      },
+      {
+        "rank": 9,
+        "artist_id": "e21857d5-3256-4547-afb3-4b6ded592596",
+        "artist_name": "Gorillaz",
+        "similarity_score": 0.9883778691291809
+      },
+      {
+        "rank": 10,
+        "artist_id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "artist_name": "David Bowie",
+        "similarity_score": 0.9878846406936646
+      },
+      {
+        "rank": 11,
+        "artist_id": "ada7a83c-e3e1-40f1-93f9-3e73dbc9298a",
+        "artist_name": "Arctic Monkeys",
+        "similarity_score": 0.9876688718795776
+      },
+      {
+        "rank": 12,
+        "artist_id": "f181961b-20f7-459e-89de-920ef03c7ed0",
+        "artist_name": "The Strokes",
+        "similarity_score": 0.987034797668457
+      },
+      {
+        "rank": 13,
+        "artist_id": "c485632c-b784-4ee9-8ea1-c5fb365681fc",
+        "artist_name": "MGMT",
+        "similarity_score": 0.9869858622550964
+      },
+      {
+        "rank": 14,
+        "artist_id": "8538e728-ca0b-4321-b7e5-cff6565dd4c0",
+        "artist_name": "Depeche Mode",
+        "similarity_score": 0.9863816499710083
+      },
+      {
+        "rank": 15,
+        "artist_id": "69ee3720-a7cb-4402-b48d-a02c366f2bcf",
+        "artist_name": "The Cure",
+        "similarity_score": 0.9862209558486938
+      },
+      {
+        "rank": 16,
+        "artist_id": "63aa26c3-d59b-4da4-84ac-716b54f1ef4d",
+        "artist_name": "Tame Impala",
+        "similarity_score": 0.9861592650413513
+      },
+      {
+        "rank": 17,
+        "artist_id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+        "artist_name": "Queen",
+        "similarity_score": 0.9850866198539734
+      },
+      {
+        "rank": 18,
+        "artist_id": "cc0b7089-c08d-4c10-b6b0-873582c17fd6",
+        "artist_name": "System of a Down",
+        "similarity_score": 0.9850327968597412
+      },
+      {
+        "rank": 19,
+        "artist_id": "6fe07aa5-fec0-4eca-a456-f29bff451b04",
+        "artist_name": "Weezer",
+        "similarity_score": 0.9841849207878113
+      },
+      {
+        "rank": 20,
+        "artist_id": "b7ffd2af-418f-4be2-bdd1-22f8b48613da",
+        "artist_name": "Nine Inch Nails",
+        "similarity_score": 0.9841046929359436
+      }
+    ]
+  },
+  {
+    "source_artist": "Muse",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "8bfac288-ccc5-448d-9573-c33ea2aa5c30",
+        "artist_name": "Red Hot Chili Peppers",
+        "similarity_score": 0.9941914677619934
+      },
+      {
+        "rank": 3,
+        "artist_id": "084308bd-1654-436f-ba03-df6697104e19",
+        "artist_name": "Green Day",
+        "similarity_score": 0.9933596849441528
+      },
+      {
+        "rank": 4,
+        "artist_id": "cc0b7089-c08d-4c10-b6b0-873582c17fd6",
+        "artist_name": "System of a Down",
+        "similarity_score": 0.9904216527938843
+      },
+      {
+        "rank": 5,
+        "artist_id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+        "artist_name": "Daft Punk",
+        "similarity_score": 0.9903814792633057
+      },
+      {
+        "rank": 6,
+        "artist_id": "5b11f4ce-a62d-471e-81fc-a69a8278c7da",
+        "artist_name": "Nirvana",
+        "similarity_score": 0.9900892972946167
+      },
+      {
+        "rank": 7,
+        "artist_id": "f59c5520-5f46-4d2c-b2c4-822eabf53419",
+        "artist_name": "Linkin Park",
+        "similarity_score": 0.9899373650550842
+      },
+      {
+        "rank": 8,
+        "artist_id": "a74b1b7f-71a5-4011-9441-d0b5e4122711",
+        "artist_name": "Radiohead",
+        "similarity_score": 0.9897072911262512
+      },
+      {
+        "rank": 9,
+        "artist_id": "ada7a83c-e3e1-40f1-93f9-3e73dbc9298a",
+        "artist_name": "Arctic Monkeys",
+        "similarity_score": 0.9891277551651001
+      },
+      {
+        "rank": 10,
+        "artist_id": "67f66c07-6e61-4026-ade5-7e782fad3a5d",
+        "artist_name": "Foo Fighters",
+        "similarity_score": 0.9888201355934143
+      },
+      {
+        "rank": 11,
+        "artist_id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+        "artist_name": "Queen",
+        "similarity_score": 0.9886965751647949
+      },
+      {
+        "rank": 12,
+        "artist_id": "95e1ead9-4d31-4808-a7ac-32c3614c116b",
+        "artist_name": "The Killers",
+        "similarity_score": 0.9882698059082031
+      },
+      {
+        "rank": 13,
+        "artist_id": "e21857d5-3256-4547-afb3-4b6ded592596",
+        "artist_name": "Gorillaz",
+        "similarity_score": 0.9878166317939758
+      },
+      {
+        "rank": 14,
+        "artist_id": "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
+        "artist_name": "Coldplay",
+        "similarity_score": 0.9868113994598389
+      },
+      {
+        "rank": 15,
+        "artist_id": "83d91898-7763-47d7-b03b-b92132375c47",
+        "artist_name": "Pink Floyd",
+        "similarity_score": 0.985227644443512
+      },
+      {
+        "rank": 16,
+        "artist_id": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+        "artist_name": "Metallica",
+        "similarity_score": 0.9847192764282227
+      },
+      {
+        "rank": 17,
+        "artist_id": "23a03e33-a603-404e-bcbf-2c00159d7067",
+        "artist_name": "The Offspring",
+        "similarity_score": 0.9842862486839294
+      },
+      {
+        "rank": 18,
+        "artist_id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+        "artist_name": "The Beatles",
+        "similarity_score": 0.9831015467643738
+      },
+      {
+        "rank": 19,
+        "artist_id": "6fe07aa5-fec0-4eca-a456-f29bff451b04",
+        "artist_name": "Weezer",
+        "similarity_score": 0.982983410358429
+      },
+      {
+        "rank": 20,
+        "artist_id": "39ab1aed-75e0-4140-bd47-540276886b60",
+        "artist_name": "Oasis",
+        "similarity_score": 0.9819394946098328
+      }
+    ]
+  },
+  {
+    "source_artist": "Steven_Wilson",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "e8f55abb-a6d5-4e5f-81b4-14f9cc320519",
+        "artist_name": "The Pineapple Thief",
+        "similarity_score": 0.8998010754585266
+      },
+      {
+        "rank": 3,
+        "artist_id": "169c4c28-858e-497b-81a4-8bc15e0026ea",
+        "artist_name": "Porcupine Tree",
+        "similarity_score": 0.870918333530426
+      },
+      {
+        "rank": 4,
+        "artist_id": "28503ab7-8bf2-4666-a7bd-2644bfc7cb1d",
+        "artist_name": "Dream Theater",
+        "similarity_score": 0.8094789385795593
+      },
+      {
+        "rank": 5,
+        "artist_id": "3a51b862-0144-40f6-aa17-6aaeefea29d9,0278afe6-a670-4022-acc3-09c0519dea8c",
+        "artist_name": "Unknown Artist",
+        "similarity_score": 0.8054664731025696
+      },
+      {
+        "rank": 6,
+        "artist_id": "985c5cc9-2dc1-49ac-8806-5b66586a2d58",
+        "artist_name": "Riverside",
+        "similarity_score": 0.8054119348526001
+      },
+      {
+        "rank": 7,
+        "artist_id": "534ee493-bfac-4575-a44a-0ae41e2c3fe4",
+        "artist_name": "Rush",
+        "similarity_score": 0.805122971534729
+      },
+      {
+        "rank": 8,
+        "artist_id": "1932f5b6-0b7b-4050-b1df-833ca89e5f44",
+        "artist_name": "Marillion",
+        "similarity_score": 0.8050942420959473
+      },
+      {
+        "rank": 9,
+        "artist_id": "a2e55cf5-ca3a-4c26-ba62-fc4a4f2bc603",
+        "artist_name": "Leprous",
+        "similarity_score": 0.8033135533332825
+      },
+      {
+        "rank": 10,
+        "artist_id": "c14b4180-dc87-481e-b17a-64e4150f90f6",
+        "artist_name": "Opeth",
+        "similarity_score": 0.8032910227775574
+      },
+      {
+        "rank": 11,
+        "artist_id": "20aa23e3-3532-42ca-acf6-e8c2e9df2688",
+        "artist_name": "Anathema",
+        "similarity_score": 0.8020885586738586
+      },
+      {
+        "rank": 12,
+        "artist_id": "ece57992-dc2e-4f67-a269-fa43626c1a3d",
+        "artist_name": "Jethro Tull",
+        "similarity_score": 0.799040675163269
+      },
+      {
+        "rank": 13,
+        "artist_id": "79491354-3d83-40e3-9d8e-7592d58d790a",
+        "artist_name": "Deep Purple",
+        "similarity_score": 0.7981312870979309
+      },
+      {
+        "rank": 14,
+        "artist_id": "c7423e0c-ab3e-4ab4-be10-cdff5a9d3062",
+        "artist_name": "Blue \u00d6yster Cult",
+        "similarity_score": 0.7977456450462341
+      },
+      {
+        "rank": 15,
+        "artist_id": "8e3fcd7d-bda1-4ca0-b987-b8528d2ee74e",
+        "artist_name": "Genesis",
+        "similarity_score": 0.7977164387702942
+      },
+      {
+        "rank": 16,
+        "artist_id": "7a42f70d-7c01-46d2-bd88-738967a631f0",
+        "artist_name": "Soen",
+        "similarity_score": 0.7968325614929199
+      },
+      {
+        "rank": 17,
+        "artist_id": "8e66ea2b-b57b-47d9-8df0-df4630aeb8e5",
+        "artist_name": "Peter Gabriel",
+        "similarity_score": 0.7960280179977417
+      },
+      {
+        "rank": 18,
+        "artist_id": "1dce970e-34bc-48b2-ab51-48d87544a4c2",
+        "artist_name": "David Gilmour",
+        "similarity_score": 0.7947903275489807
+      },
+      {
+        "rank": 19,
+        "artist_id": "94b7a39b-f3cc-4796-90dd-b1786a62877e",
+        "artist_name": "Camel",
+        "similarity_score": 0.7925047874450684
+      },
+      {
+        "rank": 20,
+        "artist_id": "fd529c0d-4a5c-479d-bbb8-601cefe2b38b",
+        "artist_name": "VOLA",
+        "similarity_score": 0.7902902364730835
+      }
+    ]
+  },
+  {
+    "source_artist": "The_Pineapple_Thief",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "3a51b862-0144-40f6-aa17-6aaeefea29d9",
+        "artist_name": "Steven Wilson",
+        "similarity_score": 0.8998010754585266
+      },
+      {
+        "rank": 3,
+        "artist_id": "985c5cc9-2dc1-49ac-8806-5b66586a2d58",
+        "artist_name": "Riverside",
+        "similarity_score": 0.8857569694519043
+      },
+      {
+        "rank": 4,
+        "artist_id": "7a42f70d-7c01-46d2-bd88-738967a631f0",
+        "artist_name": "Soen",
+        "similarity_score": 0.8438424468040466
+      },
+      {
+        "rank": 5,
+        "artist_id": "fd529c0d-4a5c-479d-bbb8-601cefe2b38b",
+        "artist_name": "VOLA",
+        "similarity_score": 0.831966757774353
+      },
+      {
+        "rank": 6,
+        "artist_id": "f443a331-2623-4d50-8797-bfb204850253",
+        "artist_name": "Pure Reason Revolution",
+        "similarity_score": 0.8284214735031128
+      },
+      {
+        "rank": 7,
+        "artist_id": "3a51b862-0144-40f6-aa17-6aaeefea29d9,0278afe6-a670-4022-acc3-09c0519dea8c",
+        "artist_name": "Unknown Artist",
+        "similarity_score": 0.8263192772865295
+      },
+      {
+        "rank": 8,
+        "artist_id": "8e67406d-de61-4e6b-a2a1-5a3725484527",
+        "artist_name": "Blackfield",
+        "similarity_score": 0.8260365724563599
+      },
+      {
+        "rank": 9,
+        "artist_id": "5706c580-e2c4-4763-8709-acd570de258e",
+        "artist_name": "Gazpacho",
+        "similarity_score": 0.8111059069633484
+      },
+      {
+        "rank": 10,
+        "artist_id": "dd5fcd94-3119-461e-9abc-04c0a8455a12",
+        "artist_name": "Lunatic Soul",
+        "similarity_score": 0.806560754776001
+      },
+      {
+        "rank": 11,
+        "artist_id": "f7c65346-9631-4220-9188-5e90baae58d5",
+        "artist_name": "Pain of Salvation",
+        "similarity_score": 0.7971183657646179
+      },
+      {
+        "rank": 12,
+        "artist_id": "a2e55cf5-ca3a-4c26-ba62-fc4a4f2bc603",
+        "artist_name": "Leprous",
+        "similarity_score": 0.7957961559295654
+      },
+      {
+        "rank": 13,
+        "artist_id": "169c4c28-858e-497b-81a4-8bc15e0026ea",
+        "artist_name": "Porcupine Tree",
+        "similarity_score": 0.794705867767334
+      },
+      {
+        "rank": 14,
+        "artist_id": "5b8f62d4-f0f2-4cd7-8106-4518dbd188db",
+        "artist_name": "Frost*",
+        "similarity_score": 0.7895117998123169
+      },
+      {
+        "rank": 15,
+        "artist_id": "20aa23e3-3532-42ca-acf6-e8c2e9df2688",
+        "artist_name": "Anathema",
+        "similarity_score": 0.7884954214096069
+      },
+      {
+        "rank": 16,
+        "artist_id": "4a059eea-f04b-4a49-a705-dd7d15566116",
+        "artist_name": "Wheel",
+        "similarity_score": 0.7755492925643921
+      },
+      {
+        "rank": 17,
+        "artist_id": "9d07f2ed-7bcf-4c60-86cc-0c29654120a0",
+        "artist_name": "Rishloo",
+        "similarity_score": 0.7639195322990417
+      },
+      {
+        "rank": 18,
+        "artist_id": "3ab39ae8-599e-4d70-8902-894dcfcf4092",
+        "artist_name": "Caligula\u2019s Horse",
+        "similarity_score": 0.7606873512268066
+      },
+      {
+        "rank": 19,
+        "artist_id": "60e2e955-b604-4fc4-bb9c-a200d0a1831b",
+        "artist_name": "Klone",
+        "similarity_score": 0.7584166526794434
+      },
+      {
+        "rank": 20,
+        "artist_id": "8e57cabb-7dc5-4eac-94c0-a3928b989af5",
+        "artist_name": "Bruce Soord",
+        "similarity_score": 0.7567586302757263
+      }
+    ]
+  },
+  {
+    "source_artist": "Nirvana",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "8bfac288-ccc5-448d-9573-c33ea2aa5c30",
+        "artist_name": "Red Hot Chili Peppers",
+        "similarity_score": 0.9956482648849487
+      },
+      {
+        "rank": 3,
+        "artist_id": "a74b1b7f-71a5-4011-9441-d0b5e4122711",
+        "artist_name": "Radiohead",
+        "similarity_score": 0.9936309456825256
+      },
+      {
+        "rank": 4,
+        "artist_id": "cc0b7089-c08d-4c10-b6b0-873582c17fd6",
+        "artist_name": "System of a Down",
+        "similarity_score": 0.993387758731842
+      },
+      {
+        "rank": 5,
+        "artist_id": "084308bd-1654-436f-ba03-df6697104e19",
+        "artist_name": "Green Day",
+        "similarity_score": 0.9929466247558594
+      },
+      {
+        "rank": 6,
+        "artist_id": "83d91898-7763-47d7-b03b-b92132375c47",
+        "artist_name": "Pink Floyd",
+        "similarity_score": 0.9921455979347229
+      },
+      {
+        "rank": 7,
+        "artist_id": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+        "artist_name": "Metallica",
+        "similarity_score": 0.9907428026199341
+      },
+      {
+        "rank": 8,
+        "artist_id": "67f66c07-6e61-4026-ade5-7e782fad3a5d",
+        "artist_name": "Foo Fighters",
+        "similarity_score": 0.9906707406044006
+      },
+      {
+        "rank": 9,
+        "artist_id": "9c9f1380-2516-4fc9-a3e6-f9f61941d090",
+        "artist_name": "Muse",
+        "similarity_score": 0.9900892972946167
+      },
+      {
+        "rank": 10,
+        "artist_id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+        "artist_name": "The Beatles",
+        "similarity_score": 0.9894887208938599
+      },
+      {
+        "rank": 11,
+        "artist_id": "056e4f3e-d505-4dad-8ec1-d04f521cbb56",
+        "artist_name": "Daft Punk",
+        "similarity_score": 0.9887980222702026
+      },
+      {
+        "rank": 12,
+        "artist_id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+        "artist_name": "Queen",
+        "similarity_score": 0.988312304019928
+      },
+      {
+        "rank": 13,
+        "artist_id": "e21857d5-3256-4547-afb3-4b6ded592596",
+        "artist_name": "Gorillaz",
+        "similarity_score": 0.9879159927368164
+      },
+      {
+        "rank": 14,
+        "artist_id": "3798b104-01cb-484c-a3b0-56adc6399b80",
+        "artist_name": "Rage Against the Machine",
+        "similarity_score": 0.9872550964355469
+      },
+      {
+        "rank": 15,
+        "artist_id": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
+        "artist_name": "David Bowie",
+        "similarity_score": 0.9872196316719055
+      },
+      {
+        "rank": 16,
+        "artist_id": "f59c5520-5f46-4d2c-b2c4-822eabf53419",
+        "artist_name": "Linkin Park",
+        "similarity_score": 0.9867342114448547
+      },
+      {
+        "rank": 17,
+        "artist_id": "8538e728-ca0b-4321-b7e5-cff6565dd4c0",
+        "artist_name": "Depeche Mode",
+        "similarity_score": 0.98660808801651
+      },
+      {
+        "rank": 18,
+        "artist_id": "678d88b2-87b0-403b-b63d-5da7465aecc3",
+        "artist_name": "Led Zeppelin",
+        "similarity_score": 0.98590087890625
+      },
+      {
+        "rank": 19,
+        "artist_id": "ada7a83c-e3e1-40f1-93f9-3e73dbc9298a",
+        "artist_name": "Arctic Monkeys",
+        "similarity_score": 0.9857950210571289
+      },
+      {
+        "rank": 20,
+        "artist_id": "23a03e33-a603-404e-bcbf-2c00159d7067",
+        "artist_name": "The Offspring",
+        "similarity_score": 0.9857929944992065
+      }
+    ]
+  },
+  {
+    "source_artist": "Tycho",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "9a709693-b4f8-4da9-8cc1-038c911a61be",
+        "artist_name": "Bonobo",
+        "similarity_score": 0.9570804834365845
+      },
+      {
+        "rank": 3,
+        "artist_id": "3bcff06f-675a-451f-9075-99e8657047e8",
+        "artist_name": "Four Tet",
+        "similarity_score": 0.940262496471405
+      },
+      {
+        "rank": 4,
+        "artist_id": "6d7b7cd4-254b-4c25-83f6-dd20f98ceacd",
+        "artist_name": "M83",
+        "similarity_score": 0.9311503171920776
+      },
+      {
+        "rank": 5,
+        "artist_id": "d1515727-4a93-4c0d-88cb-d7a9fce01879",
+        "artist_name": "Jamie xx",
+        "similarity_score": 0.9302337169647217
+      },
+      {
+        "rank": 6,
+        "artist_id": "69158f97-4c07-4c4e-baf8-4e4ab1ed666e",
+        "artist_name": "Boards of Canada",
+        "similarity_score": 0.928888738155365
+      },
+      {
+        "rank": 7,
+        "artist_id": "1c70a3fc-fa3c-4be1-8b55-c3192db8a884",
+        "artist_name": "R\u00f6yksopp",
+        "similarity_score": 0.9277387857437134
+      },
+      {
+        "rank": 8,
+        "artist_id": "735e3514-a8ae-401f-af3b-6300df1b8d2c",
+        "artist_name": "Caribou",
+        "similarity_score": 0.9270569682121277
+      },
+      {
+        "rank": 9,
+        "artist_id": "aea4c9b9-9f8d-49dc-b2ca-57d6f26e8634",
+        "artist_name": "Khruangbin",
+        "similarity_score": 0.9267133474349976
+      },
+      {
+        "rank": 10,
+        "artist_id": "c5c2ea1c-4bde-4f4d-bd0b-47b200bf99d6",
+        "artist_name": "The xx",
+        "similarity_score": 0.9261809587478638
+      },
+      {
+        "rank": 11,
+        "artist_id": "efa2c11a-1a35-4b60-bc1b-66d37de88511",
+        "artist_name": "DJ Shadow",
+        "similarity_score": 0.9218888282775879
+      },
+      {
+        "rank": 12,
+        "artist_id": "8970d868-0723-483b-a75b-51088913d3d4",
+        "artist_name": "Moby",
+        "similarity_score": 0.9196323156356812
+      },
+      {
+        "rank": 13,
+        "artist_id": "cb67438a-7f50-4f2b-a6f1-2bb2729fd538",
+        "artist_name": "Air",
+        "similarity_score": 0.9194356203079224
+      },
+      {
+        "rank": 14,
+        "artist_id": "803f2853-7e3e-4dff-96a7-9f77b5f56de5",
+        "artist_name": "Rival Consoles",
+        "similarity_score": 0.91849684715271
+      },
+      {
+        "rank": 15,
+        "artist_id": "74a30f2a-dae6-4e99-8a75-cb0f93b31aa6",
+        "artist_name": "Washed Out",
+        "similarity_score": 0.9179705381393433
+      },
+      {
+        "rank": 16,
+        "artist_id": "10adbe5e-a2c0-4bf3-8249-2b4cbf6e6ca8",
+        "artist_name": "Massive Attack",
+        "similarity_score": 0.9174333810806274
+      },
+      {
+        "rank": 17,
+        "artist_id": "860b2707-6153-4e3a-aa57-74d2b42c55b5",
+        "artist_name": "Justice",
+        "similarity_score": 0.9157655239105225
+      },
+      {
+        "rank": 18,
+        "artist_id": "1946a82a-f927-40c2-8235-38d64f50d043",
+        "artist_name": "The Chemical Brothers",
+        "similarity_score": 0.9130536317825317
+      },
+      {
+        "rank": 19,
+        "artist_id": "f22942a1-6f70-4f48-866e-238cb2308fbd",
+        "artist_name": "Aphex Twin",
+        "similarity_score": 0.9128887057304382
+      },
+      {
+        "rank": 20,
+        "artist_id": "3252542b-98a7-48ba-9861-7a612b16c227",
+        "artist_name": "Kiasmos",
+        "similarity_score": 0.910098135471344
+      }
+    ]
+  },
+  {
+    "source_artist": "Alvvays",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "9f81247f-7f57-42f3-a8ba-75bef554e591",
+        "artist_name": "Big Thief",
+        "similarity_score": 0.9509166479110718
+      },
+      {
+        "rank": 3,
+        "artist_id": "a16371b9-7d36-497a-a9d4-42b0a0440c5e",
+        "artist_name": "Slowdive",
+        "similarity_score": 0.9492074251174927
+      },
+      {
+        "rank": 4,
+        "artist_id": "d5cc67b8-1cc4-453b-96e8-44487acdebea",
+        "artist_name": "Beach House",
+        "similarity_score": 0.9459113478660583
+      },
+      {
+        "rank": 5,
+        "artist_id": "68c261d5-48c8-4ea9-9466-9fc908dc79bb",
+        "artist_name": "Magdalena Bay",
+        "similarity_score": 0.9417810440063477
+      },
+      {
+        "rank": 6,
+        "artist_id": "000fc734-b7e1-4a01-92d1-f544261b43f5",
+        "artist_name": "Cocteau Twins",
+        "similarity_score": 0.9405482411384583
+      },
+      {
+        "rank": 7,
+        "artist_id": "03ad1736-b7c9-412a-b442-82536d63a5c4",
+        "artist_name": "Elliott Smith",
+        "similarity_score": 0.9398601651191711
+      },
+      {
+        "rank": 8,
+        "artist_id": "8ca01f46-53ac-4af2-8516-55a909c0905e",
+        "artist_name": "My Bloody Valentine",
+        "similarity_score": 0.9380157589912415
+      },
+      {
+        "rank": 9,
+        "artist_id": "763cb144-afdb-471e-bd86-d4f5b9b58641",
+        "artist_name": "Adrianne Lenker",
+        "similarity_score": 0.9283775091171265
+      },
+      {
+        "rank": 10,
+        "artist_id": "74963434-dcb6-4b14-98cc-99873b06db66",
+        "artist_name": "Future Islands",
+        "similarity_score": 0.9277505874633789
+      },
+      {
+        "rank": 11,
+        "artist_id": "01d3c51b-9b98-418a-8d8e-37f6fab59d8c",
+        "artist_name": "Sufjan Stevens",
+        "similarity_score": 0.9276366233825684
+      },
+      {
+        "rank": 12,
+        "artist_id": "9055fca5-69bc-4d47-b569-ab2012a19565",
+        "artist_name": "The Smile",
+        "similarity_score": 0.9266388416290283
+      },
+      {
+        "rank": 13,
+        "artist_id": "2aaf7396-6ab8-40f3-9776-a41c42c8e26b",
+        "artist_name": "LCD Soundsystem",
+        "similarity_score": 0.9253479838371277
+      },
+      {
+        "rank": 14,
+        "artist_id": "c48d4327-8122-4286-af66-05e1ee6ac4d8",
+        "artist_name": "Mazzy Star",
+        "similarity_score": 0.9250207543373108
+      },
+      {
+        "rank": 15,
+        "artist_id": "d8f43dc5-4613-48ac-8c23-a62b82f8c67a",
+        "artist_name": "Caroline Polachek",
+        "similarity_score": 0.9249764680862427
+      },
+      {
+        "rank": 16,
+        "artist_id": "fd87acc7-e0a0-4a45-bc2a-d2ab5c10be68",
+        "artist_name": "Fontaines D.C.",
+        "similarity_score": 0.924498975276947
+      },
+      {
+        "rank": 17,
+        "artist_id": "af37c51c-0790-4a29-b995-456f98a6b8c9",
+        "artist_name": "Vampire Weekend",
+        "similarity_score": 0.9241348505020142
+      },
+      {
+        "rank": 18,
+        "artist_id": "fa97dd36-1b82-43d7-a6e4-2adeafd59cef",
+        "artist_name": "Fleet Foxes",
+        "similarity_score": 0.923754096031189
+      },
+      {
+        "rank": 19,
+        "artist_id": "b747dabe-b66c-48f6-bae6-b5e16d86b9ab",
+        "artist_name": "Crumb",
+        "similarity_score": 0.9221562147140503
+      },
+      {
+        "rank": 20,
+        "artist_id": "b23e8a63-8f47-4882-b55b-df2c92ef400e",
+        "artist_name": "Interpol",
+        "similarity_score": 0.920985221862793
+      }
+    ]
+  },
+  {
+    "source_artist": "Men_I_Trust",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "d786f59b-1836-4ddb-8393-ab753edbe984",
+        "artist_name": "Clairo",
+        "similarity_score": 0.9549934267997742
+      },
+      {
+        "rank": 3,
+        "artist_id": "f2492c31-54a8-4347-a1fc-f81f72873bbf",
+        "artist_name": "Mac DeMarco",
+        "similarity_score": 0.9549758434295654
+      },
+      {
+        "rank": 4,
+        "artist_id": "d5cc67b8-1cc4-453b-96e8-44487acdebea",
+        "artist_name": "Beach House",
+        "similarity_score": 0.9467235803604126
+      },
+      {
+        "rank": 5,
+        "artist_id": "b747dabe-b66c-48f6-bae6-b5e16d86b9ab",
+        "artist_name": "Crumb",
+        "similarity_score": 0.9461796879768372
+      },
+      {
+        "rank": 6,
+        "artist_id": "7a3970c9-ecd8-4eee-a267-4d8c77d97ff3",
+        "artist_name": "The Mar\u00edas",
+        "similarity_score": 0.9443461298942566
+      },
+      {
+        "rank": 7,
+        "artist_id": "68c261d5-48c8-4ea9-9466-9fc908dc79bb",
+        "artist_name": "Magdalena Bay",
+        "similarity_score": 0.9396971464157104
+      },
+      {
+        "rank": 8,
+        "artist_id": "fa58cf24-0e44-421d-8519-8bf461dcfaa5",
+        "artist_name": "Mitski",
+        "similarity_score": 0.939024031162262
+      },
+      {
+        "rank": 9,
+        "artist_id": "38f0c7ac-46eb-49ca-b3ab-c785ccd05a60",
+        "artist_name": "TV Girl",
+        "similarity_score": 0.9385148286819458
+      },
+      {
+        "rank": 10,
+        "artist_id": "88d17133-abbc-42db-9526-4e2c1db60336",
+        "artist_name": "beabadoobee",
+        "similarity_score": 0.9384832382202148
+      },
+      {
+        "rank": 11,
+        "artist_id": "63aa26c3-d59b-4da4-84ac-716b54f1ef4d",
+        "artist_name": "Tame Impala",
+        "similarity_score": 0.9367580413818359
+      },
+      {
+        "rank": 12,
+        "artist_id": "34557d8f-ee4a-44ab-ae6e-49bb8ac604d0",
+        "artist_name": "Cigarettes After Sex",
+        "similarity_score": 0.9271935820579529
+      },
+      {
+        "rank": 13,
+        "artist_id": "d8f43dc5-4613-48ac-8c23-a62b82f8c67a",
+        "artist_name": "Caroline Polachek",
+        "similarity_score": 0.9255707859992981
+      },
+      {
+        "rank": 14,
+        "artist_id": "a16371b9-7d36-497a-a9d4-42b0a0440c5e",
+        "artist_name": "Slowdive",
+        "similarity_score": 0.923191249370575
+      },
+      {
+        "rank": 15,
+        "artist_id": "6bbb3983-ce8a-4971-96e0-7cae73268fc4",
+        "artist_name": "Jungle",
+        "similarity_score": 0.9229675531387329
+      },
+      {
+        "rank": 16,
+        "artist_id": "aea4c9b9-9f8d-49dc-b2ca-57d6f26e8634",
+        "artist_name": "Khruangbin",
+        "similarity_score": 0.9213175177574158
+      },
+      {
+        "rank": 17,
+        "artist_id": "044fd265-79dd-43eb-afc4-8b20becf7e17",
+        "artist_name": "Thundercat",
+        "similarity_score": 0.9197953343391418
+      },
+      {
+        "rank": 18,
+        "artist_id": "7fb57fba-a6ef-44c2-abab-2fa3bdee607e",
+        "artist_name": "Childish Gambino",
+        "similarity_score": 0.9194029569625854
+      },
+      {
+        "rank": 19,
+        "artist_id": "7e5a2a59-6d9f-4a17-b7c2-e1eedb7bd222",
+        "artist_name": "Grimes",
+        "similarity_score": 0.9193630218505859
+      },
+      {
+        "rank": 20,
+        "artist_id": "000fc734-b7e1-4a01-92d1-f544261b43f5",
+        "artist_name": "Cocteau Twins",
+        "similarity_score": 0.9191928505897522
+      }
+    ]
+  },
+  {
+    "source_artist": "Blackfield",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "e8f55abb-a6d5-4e5f-81b4-14f9cc320519",
+        "artist_name": "The Pineapple Thief",
+        "similarity_score": 0.8260365724563599
+      },
+      {
+        "rank": 3,
+        "artist_id": "5ff525f0-a7ed-41ba-ba01-f88ebd2df482",
+        "artist_name": "Airbag",
+        "similarity_score": 0.8153668642044067
+      },
+      {
+        "rank": 4,
+        "artist_id": "5706c580-e2c4-4763-8709-acd570de258e",
+        "artist_name": "Gazpacho",
+        "similarity_score": 0.813189685344696
+      },
+      {
+        "rank": 5,
+        "artist_id": "985c5cc9-2dc1-49ac-8806-5b66586a2d58",
+        "artist_name": "Riverside",
+        "similarity_score": 0.8126447200775146
+      },
+      {
+        "rank": 6,
+        "artist_id": "f443a331-2623-4d50-8797-bfb204850253",
+        "artist_name": "Pure Reason Revolution",
+        "similarity_score": 0.7768793702125549
+      },
+      {
+        "rank": 7,
+        "artist_id": "dd5fcd94-3119-461e-9abc-04c0a8455a12",
+        "artist_name": "Lunatic Soul",
+        "similarity_score": 0.7759413719177246
+      },
+      {
+        "rank": 8,
+        "artist_id": "7a42f70d-7c01-46d2-bd88-738967a631f0",
+        "artist_name": "Soen",
+        "similarity_score": 0.7628248929977417
+      },
+      {
+        "rank": 9,
+        "artist_id": "9a5cf59b-5da0-4021-b885-b6b78dd6886e",
+        "artist_name": "IQ",
+        "similarity_score": 0.7586150169372559
+      },
+      {
+        "rank": 10,
+        "artist_id": "60e2e955-b604-4fc4-bb9c-a200d0a1831b",
+        "artist_name": "Klone",
+        "similarity_score": 0.75421541929245
+      },
+      {
+        "rank": 11,
+        "artist_id": "f7c65346-9631-4220-9188-5e90baae58d5",
+        "artist_name": "Pain of Salvation",
+        "similarity_score": 0.7501715421676636
+      },
+      {
+        "rank": 12,
+        "artist_id": "3a51b862-0144-40f6-aa17-6aaeefea29d9",
+        "artist_name": "Steven Wilson",
+        "similarity_score": 0.7406492233276367
+      },
+      {
+        "rank": 13,
+        "artist_id": "2d2ea891-ebda-411f-aa4a-413cb31df366",
+        "artist_name": "Bj\u00f8rn Riis",
+        "similarity_score": 0.7397134304046631
+      },
+      {
+        "rank": 14,
+        "artist_id": "4492c65a-533e-4189-b865-b5af36003b30",
+        "artist_name": "Chroma Key",
+        "similarity_score": 0.7374839186668396
+      },
+      {
+        "rank": 15,
+        "artist_id": "3a51b862-0144-40f6-aa17-6aaeefea29d9,0278afe6-a670-4022-acc3-09c0519dea8c",
+        "artist_name": "Unknown Artist",
+        "similarity_score": 0.7370107769966125
+      },
+      {
+        "rank": 16,
+        "artist_id": "4f1f3fbc-a043-4280-9a42-f238f4740065",
+        "artist_name": "Storm Corrosion",
+        "similarity_score": 0.7360913157463074
+      },
+      {
+        "rank": 17,
+        "artist_id": "9d07f2ed-7bcf-4c60-86cc-0c29654120a0",
+        "artist_name": "Rishloo",
+        "similarity_score": 0.7350755333900452
+      },
+      {
+        "rank": 18,
+        "artist_id": "9b78f864-86fa-4345-8024-9a23c335378c",
+        "artist_name": "Demians",
+        "similarity_score": 0.7349305152893066
+      },
+      {
+        "rank": 19,
+        "artist_id": "fc19c778-f7c9-40e4-85d1-427236ef8b4d",
+        "artist_name": "OSI",
+        "similarity_score": 0.7321358323097229
+      },
+      {
+        "rank": 20,
+        "artist_id": "795038aa-212d-437f-b0c2-42f3e4b1ebb8",
+        "artist_name": "Beardfish",
+        "similarity_score": 0.7249787449836731
+      }
+    ]
+  },
+  {
+    "source_artist": "Emancipator",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "9a709693-b4f8-4da9-8cc1-038c911a61be",
+        "artist_name": "Bonobo",
+        "similarity_score": 0.9025400876998901
+      },
+      {
+        "rank": 3,
+        "artist_id": "cbef45a9-7acb-4325-94c9-70081ac8d1b8",
+        "artist_name": "Tycho",
+        "similarity_score": 0.890554666519165
+      },
+      {
+        "rank": 4,
+        "artist_id": "803f2853-7e3e-4dff-96a7-9f77b5f56de5",
+        "artist_name": "Rival Consoles",
+        "similarity_score": 0.8736579418182373
+      },
+      {
+        "rank": 5,
+        "artist_id": "efa2c11a-1a35-4b60-bc1b-66d37de88511",
+        "artist_name": "DJ Shadow",
+        "similarity_score": 0.8663551807403564
+      },
+      {
+        "rank": 6,
+        "artist_id": "1c70a3fc-fa3c-4be1-8b55-c3192db8a884",
+        "artist_name": "R\u00f6yksopp",
+        "similarity_score": 0.8662934303283691
+      },
+      {
+        "rank": 7,
+        "artist_id": "f1560407-8826-4ec9-b78f-e0c3fa3ea4f5",
+        "artist_name": "Quantic",
+        "similarity_score": 0.865767776966095
+      },
+      {
+        "rank": 8,
+        "artist_id": "c5c2ea1c-4bde-4f4d-bd0b-47b200bf99d6",
+        "artist_name": "The xx",
+        "similarity_score": 0.865631639957428
+      },
+      {
+        "rank": 9,
+        "artist_id": "78c94cba-761f-4212-8508-a24bda2e57dc",
+        "artist_name": "Little People",
+        "similarity_score": 0.8633263111114502
+      },
+      {
+        "rank": 10,
+        "artist_id": "1a120ec5-35b3-4f3e-aa49-7201550d9feb",
+        "artist_name": "RJD2",
+        "similarity_score": 0.8584461212158203
+      },
+      {
+        "rank": 11,
+        "artist_id": "3bcff06f-675a-451f-9075-99e8657047e8",
+        "artist_name": "Four Tet",
+        "similarity_score": 0.8553615808486938
+      },
+      {
+        "rank": 12,
+        "artist_id": "b8c5cc4f-239f-4e02-b46f-b040b77c2030",
+        "artist_name": "Nightmares on Wax",
+        "similarity_score": 0.8548887372016907
+      },
+      {
+        "rank": 13,
+        "artist_id": "cb67438a-7f50-4f2b-a6f1-2bb2729fd538",
+        "artist_name": "Air",
+        "similarity_score": 0.8542916178703308
+      },
+      {
+        "rank": 14,
+        "artist_id": "72bea26b-bbb7-47c7-b3cd-dd9eca7cd258",
+        "artist_name": "Tor",
+        "similarity_score": 0.8542665839195251
+      },
+      {
+        "rank": 15,
+        "artist_id": "3252542b-98a7-48ba-9861-7a612b16c227",
+        "artist_name": "Kiasmos",
+        "similarity_score": 0.8536444902420044
+      },
+      {
+        "rank": 16,
+        "artist_id": "a505bb48-ad65-4af4-ae47-29149715bff9",
+        "artist_name": "Thievery Corporation",
+        "similarity_score": 0.8534124493598938
+      },
+      {
+        "rank": 17,
+        "artist_id": "24786816-025f-49f4-9787-4945a3311f96",
+        "artist_name": "The Flashbulb",
+        "similarity_score": 0.8534021377563477
+      },
+      {
+        "rank": 18,
+        "artist_id": "0b0c25f4-f31c-46a5-a4fb-ccbf53d663bd",
+        "artist_name": "Jon Hopkins",
+        "similarity_score": 0.8516786098480225
+      },
+      {
+        "rank": 19,
+        "artist_id": "7754905b-8bf7-48e2-935a-03d566fec464",
+        "artist_name": "Moderat",
+        "similarity_score": 0.8513973951339722
+      },
+      {
+        "rank": 20,
+        "artist_id": "2d68f237-4e00-424a-a03e-d16993d1da15",
+        "artist_name": "Max Cooper",
+        "similarity_score": 0.8506155014038086
+      }
+    ]
+  }
+]
