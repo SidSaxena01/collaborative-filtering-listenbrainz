@@ -203,6 +203,18 @@ def generate_html_report(stats: Dict, artist_info: Dict, dirs: Dict[str, str]) -
                     font-size: 0.8em;
                 }}
             }}
+            /* Smaller style for network visualization */
+            .network-visualization {{
+                text-align: center;
+                width: 70%;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }}
+            .network-visualization img {{
+                max-width: 100%;
+                height: auto;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }}
         </style>
     </head>
     <body>
@@ -656,7 +668,7 @@ def generate_html_report(stats: Dict, artist_info: Dict, dirs: Dict[str, str]) -
             <p>The network visualization below shows relationships between artists based on similarity scores.
             Connected artists are frequently listened to by the same users.</p>
             
-            <div class="visualization full-width">
+            <div class="network-visualization">
                 <img src="images/artist_network.png" alt="Artist Relationship Network">
                 <p><em>Network graph showing artist relationships based on listener overlap. 
                 Clusters indicate genres or musical styles.</em></p>
