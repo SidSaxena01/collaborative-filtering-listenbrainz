@@ -3,19 +3,13 @@
 Artist search utility for ListenBrainz Collaborative Filtering
 """
 
-import logging
 import time
 import urllib.parse
 from typing import Dict, List
 
 import requests
+from loguru import logger
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger("artist_search")
 
 def search_artist(name: str) -> List[Dict]:
     """Search for an artist by name using the MusicBrainz API.

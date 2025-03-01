@@ -11,7 +11,6 @@ import argparse
 import hashlib
 import importlib
 import json
-import logging
 import os
 import pickle
 import shutil
@@ -35,23 +34,13 @@ import polars as pl
 # import pyarrow.parquet as pq
 from implicit.als import AlternatingLeastSquares
 from implicit.nearest_neighbours import bm25_weight
+from loguru import logger
 
 # import the artist search module
 import artist_search
 
 # Import the report generator module
 import listenbrainz_report
-
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler("listenbrainz_processing.log")
-    ]
-)
-logger = logging.getLogger("listenbrainz")
 
 # Set of temporary files to clean up at exit
 temp_files = set()
@@ -341,14 +330,27 @@ def convert_all_listens(data_root: str, parquet_root: str, months: List[int]) ->
     all_unique_msids = set()
     
     for month in months:
-        listen_file = os.path.join(data_root, f"{month}.listens.zst")
         parquet_file = os.path.join(parquet_root, f"listens_{month}.parquet")
         
-        # Decompress if needed
-        if not os.path.exists(listen_file.replace('.zst', '')):
+        # First check if Parquet file already exists
+        if (os.path.exists(parquet_file)):
+            logger.info(f"Parquet file for month {month} already exists, skipping conversion")
+            try:
+                df = pl.read_parquet(parquet_file)
+                unique_msids = set(df["recording_msid"].unique().to_list())
+                results[month] = (parquet_file, unique_msids)
+                all_unique_msids.update(unique_msids)
+                continue
+            except Exception as e:
+                logger.warning(f"Could not extract MSIDs from existing file {parquet_file}: {str(e)}")
+        
+        # If Parquet doesn't exist or couldn't be read, proceed with conversion
+        listen_file = os.path.join(data_root, f"{month}.listens.zst")
+        
+        # Check if decompressed file already exists
+        decompressed_file = listen_file.replace('.zst', '')
+        if not os.path.exists(decompressed_file):
             decompressed_file = decompress_zst_file(listen_file)
-        else:
-            decompressed_file = listen_file.replace('.zst', '')
         
         # Convert to Parquet
         parquet_file, unique_msids = convert_listens_to_parquet(decompressed_file, parquet_file)
@@ -356,13 +358,6 @@ def convert_all_listens(data_root: str, parquet_root: str, months: List[int]) ->
         # Add to results
         results[month] = (parquet_file, unique_msids)
         all_unique_msids.update(unique_msids)
-        
-        # Clean up decompressed file
-        if decompressed_file != listen_file.replace('.zst', ''):
-            try:
-                os.remove(decompressed_file)
-            except Exception as e:
-                logger.warning(f"Error removing temporary file {decompressed_file}: {str(e)}")
     
     logger.info(f"Converted {len(months)} listen files to Parquet with {len(all_unique_msids)} total unique MSIDs")
     return results, all_unique_msids
@@ -380,7 +375,6 @@ def convert_mapping_file(data_root: str, parquet_root: str, unique_msids: Set[st
     Returns:
         Path to the Parquet file
     """
-    mapping_file = os.path.join(data_root, "listenbrainz_msid_mapping.csv.zst")
     parquet_file = os.path.join(parquet_root, "msid_mapping.parquet")
     
     # Check if output already exists
@@ -391,11 +385,13 @@ def convert_mapping_file(data_root: str, parquet_root: str, unique_msids: Set[st
     # Ensure the output directory exists
     os.makedirs(os.path.dirname(parquet_file), exist_ok=True)
     
-    # Decompress if needed
-    if not os.path.exists(mapping_file.replace('.zst', '')):
+    # If Parquet doesn't exist, proceed with conversion
+    mapping_file = os.path.join(data_root, "listenbrainz_msid_mapping.csv.zst")
+    
+    # Check if decompressed file already exists
+    decompressed_file = mapping_file.replace('.zst', '')
+    if not os.path.exists(decompressed_file):
         decompressed_file = decompress_zst_file(mapping_file)
-    else:
-        decompressed_file = mapping_file.replace('.zst', '')
     
     # Convert to Parquet using DuckDB for efficient filtering
     logger.info(f"Converting and filtering mapping file to Parquet")
@@ -438,13 +434,6 @@ def convert_mapping_file(data_root: str, parquet_root: str, unique_msids: Set[st
         
         con.execute(query)
         
-        # Clean up
-        if decompressed_file != mapping_file.replace('.zst', ''):
-            try:
-                os.remove(decompressed_file)
-            except Exception as e:
-                logger.warning(f"Error removing temporary file {decompressed_file}: {str(e)}")
-        
         # Clean up temporary files
         os.remove(msids_file)
         os.remove(quality_file)
@@ -470,7 +459,6 @@ def convert_redirect_file(data_root: str, parquet_root: str) -> str:
     Returns:
         Path to the Parquet file
     """
-    redirect_file = os.path.join(data_root, "canonical_recording_redirect.csv.zst")
     parquet_file = os.path.join(parquet_root, "canonical_redirects.parquet")
     
     # Check if output already exists
@@ -481,11 +469,13 @@ def convert_redirect_file(data_root: str, parquet_root: str) -> str:
     # Ensure the output directory exists
     os.makedirs(os.path.dirname(parquet_file), exist_ok=True)
     
-    # Decompress if needed
-    if not os.path.exists(redirect_file.replace('.zst', '')):
+    # If Parquet doesn't exist, proceed with conversion
+    redirect_file = os.path.join(data_root, "canonical_recording_redirect.csv.zst")
+    
+    # Check if decompressed file already exists
+    decompressed_file = redirect_file.replace('.zst', '')
+    if not os.path.exists(decompressed_file):
         decompressed_file = decompress_zst_file(redirect_file)
-    else:
-        decompressed_file = redirect_file.replace('.zst', '')
     
     # Convert to Parquet
     logger.info(f"Converting redirect file to Parquet")
@@ -503,13 +493,6 @@ def convert_redirect_file(data_root: str, parquet_root: str) -> str:
         """
         
         con.execute(query)
-        
-        # Clean up
-        if decompressed_file != redirect_file.replace('.zst', ''):
-            try:
-                os.remove(decompressed_file)
-            except Exception as e:
-                logger.warning(f"Error removing temporary file {decompressed_file}: {str(e)}")
         
         logger.info(f"Successfully converted redirect file to Parquet")
         return parquet_file
@@ -532,7 +515,6 @@ def convert_canonical_data_file(data_root: str, parquet_root: str) -> str:
     Returns:
         Path to the Parquet file
     """
-    canonical_file = os.path.join(data_root, "canonical_musicbrainz_data.csv.zst")
     parquet_file = os.path.join(parquet_root, "canonical_data.parquet")
     
     # Check if output already exists
@@ -543,11 +525,13 @@ def convert_canonical_data_file(data_root: str, parquet_root: str) -> str:
     # Ensure the output directory exists
     os.makedirs(os.path.dirname(parquet_file), exist_ok=True)
     
-    # Decompress if needed
-    if not os.path.exists(canonical_file.replace('.zst', '')):
+    # If Parquet doesn't exist, proceed with conversion
+    canonical_file = os.path.join(data_root, "canonical_musicbrainz_data.csv.zst")
+    
+    # Check if decompressed file already exists
+    decompressed_file = canonical_file.replace('.zst', '')
+    if not os.path.exists(decompressed_file):
         decompressed_file = decompress_zst_file(canonical_file)
-    else:
-        decompressed_file = canonical_file.replace('.zst', '')
     
     # Convert to Parquet
     logger.info(f"Converting canonical data file to Parquet")
@@ -565,13 +549,6 @@ def convert_canonical_data_file(data_root: str, parquet_root: str) -> str:
         """
         
         con.execute(query)
-        
-        # Clean up
-        if decompressed_file != canonical_file.replace('.zst', ''):
-            try:
-                os.remove(decompressed_file)
-            except Exception as e:
-                logger.warning(f"Error removing temporary file {decompressed_file}: {str(e)}")
         
         logger.info(f"Successfully converted canonical data file to Parquet")
         return parquet_file
@@ -594,7 +571,6 @@ def convert_artist_file(data_root: str, parquet_root: str) -> str:
     Returns:
         Path to the Parquet file
     """
-    artist_file = os.path.join(data_root, "musicbrainz_artist.csv")
     parquet_file = os.path.join(parquet_root, "artists.parquet")
     
     # Check if output already exists
@@ -604,6 +580,9 @@ def convert_artist_file(data_root: str, parquet_root: str) -> str:
     
     # Ensure the output directory exists
     os.makedirs(os.path.dirname(parquet_file), exist_ok=True)
+    
+    # If Parquet doesn't exist, proceed with conversion
+    artist_file = os.path.join(data_root, "musicbrainz_artist.csv")
     
     # Convert to Parquet
     logger.info(f"Converting artist file to Parquet")
@@ -662,10 +641,10 @@ def save_mapping_stats(mapped_count: int, unmapped_count: int, output_dir: str) 
     }
     
     # Ensure directory exists
-    os.makedirs(os.path.join(output_dir, "report/data"), exist_ok=True)
+    os.makedirs(os.path.join(output_dir, "results/report/data"), exist_ok=True)
     
     # Save to data quality file for use in reporting
-    with open(os.path.join(output_dir, "report/data/data_quality.json"), 'w') as f:
+    with open(os.path.join(output_dir, "results/report/data/data_quality.json"), 'w') as f:
         json.dump(stats, f, indent=2)
     
     logger.info(f"Mapping statistics saved: {mapped_pct:.1f}% mapped ({mapped_count:,} out of {total:,})")
@@ -1068,7 +1047,7 @@ def save_artist_recommendations(model, matrix_artists, artist_map, artist_ids, w
             # Create recommendations data
             recommendations = []
             for i, (similar_id, score) in enumerate(zip(similar_ids, scores)):
-                if similar_id < len(matrix_artists):  # Ensure index is valid
+                if (similar_id < len(matrix_artists)):  # Ensure index is valid
                     similar_artist_id = matrix_artists[similar_id]
                     similar_artist_name = artist_map.get(similar_artist_id, "Unknown Artist")
                     
@@ -1317,7 +1296,6 @@ def main():
                         help="Comma-separated list of match quality levels to include")
     parser.add_argument("--force-reprocess", action="store_true", help="Force reprocessing of all files")
     parser.add_argument("--analyze-artists", nargs="*", help="List of artist MBIDs to analyze")
-    parser.add_argument("--debug", action="store_true", help="Enable debug logging")
     parser.add_argument("--search-artists", action="store_true", 
                         help="Interactively search for artists to analyze")
     parser.add_argument("--force-retrain", action="store_true", 
@@ -1328,12 +1306,6 @@ def main():
                    help="Reuse the list of artists from the previous search")
     
     args = parser.parse_args()
-    
-    # Configure logging level based on debug flag
-    if args.debug:
-        logging.getLogger().setLevel(logging.DEBUG)
-        logger.setLevel(logging.DEBUG)
-        logger.debug("Debug logging enabled")
     
     # Determine which months to process
     months_to_process = []
