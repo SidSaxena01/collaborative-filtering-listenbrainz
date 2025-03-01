@@ -1664,5 +1664,243 @@
         "similarity_score": 0.8506155014038086
       }
     ]
+  },
+  {
+    "source_artist": "Metric",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "c485632c-b784-4ee9-8ea1-c5fb365681fc",
+        "artist_name": "MGMT",
+        "similarity_score": 0.9595810770988464
+      },
+      {
+        "rank": 3,
+        "artist_id": "aa7a2827-f74b-473c-bd79-03d065835cf7",
+        "artist_name": "Franz Ferdinand",
+        "similarity_score": 0.9573041796684265
+      },
+      {
+        "rank": 4,
+        "artist_id": "6f1de078-6684-4792-820d-2ffad64c15ed",
+        "artist_name": "Two Door Cinema Club",
+        "similarity_score": 0.9540475010871887
+      },
+      {
+        "rank": 5,
+        "artist_id": "b41b38d4-ef3e-4f37-8c75-cfe9af999696",
+        "artist_name": "Cage the Elephant",
+        "similarity_score": 0.9531347751617432
+      },
+      {
+        "rank": 6,
+        "artist_id": "7e5a2a59-6d9f-4a17-b7c2-e1eedb7bd222",
+        "artist_name": "Grimes",
+        "similarity_score": 0.9522168636322021
+      },
+      {
+        "rank": 7,
+        "artist_id": "584c04d2-4acc-491b-8a0a-e63133f4bfc4",
+        "artist_name": "Yeah Yeah Yeahs",
+        "similarity_score": 0.9517539143562317
+      },
+      {
+        "rank": 8,
+        "artist_id": "fc7bbf00-fbaa-4736-986b-b3ac0266ca9b",
+        "artist_name": "alt\u2010J",
+        "similarity_score": 0.9514491558074951
+      },
+      {
+        "rank": 9,
+        "artist_id": "6fe07aa5-fec0-4eca-a456-f29bff451b04",
+        "artist_name": "Weezer",
+        "similarity_score": 0.9506319761276245
+      },
+      {
+        "rank": 10,
+        "artist_id": "f181961b-20f7-459e-89de-920ef03c7ed0",
+        "artist_name": "The Strokes",
+        "similarity_score": 0.9502689838409424
+      },
+      {
+        "rank": 11,
+        "artist_id": "e0e1a584-dd0a-4bd1-88d1-c4c62895039d",
+        "artist_name": "Foster the People",
+        "similarity_score": 0.9488673210144043
+      },
+      {
+        "rank": 12,
+        "artist_id": "63aa26c3-d59b-4da4-84ac-716b54f1ef4d",
+        "artist_name": "Tame Impala",
+        "similarity_score": 0.9475145936012268
+      },
+      {
+        "rank": 13,
+        "artist_id": "af37c51c-0790-4a29-b995-456f98a6b8c9",
+        "artist_name": "Vampire Weekend",
+        "similarity_score": 0.947311520576477
+      },
+      {
+        "rank": 14,
+        "artist_id": "e21857d5-3256-4547-afb3-4b6ded592596",
+        "artist_name": "Gorillaz",
+        "similarity_score": 0.9471163153648376
+      },
+      {
+        "rank": 15,
+        "artist_id": "95e1ead9-4d31-4808-a7ac-32c3614c116b",
+        "artist_name": "The Killers",
+        "similarity_score": 0.9465174674987793
+      },
+      {
+        "rank": 16,
+        "artist_id": "dfe78af2-779e-4137-826a-3073a16e3278",
+        "artist_name": "Phantogram",
+        "similarity_score": 0.946363091468811
+      },
+      {
+        "rank": 17,
+        "artist_id": "d5cc67b8-1cc4-453b-96e8-44487acdebea",
+        "artist_name": "Beach House",
+        "similarity_score": 0.9441983699798584
+      },
+      {
+        "rank": 18,
+        "artist_id": "67f66c07-6e61-4026-ade5-7e782fad3a5d",
+        "artist_name": "Foo Fighters",
+        "similarity_score": 0.9435341358184814
+      },
+      {
+        "rank": 19,
+        "artist_id": "44cf61b8-5197-448a-b82b-cef6ee89fac5",
+        "artist_name": "Paramore",
+        "similarity_score": 0.9434783458709717
+      },
+      {
+        "rank": 20,
+        "artist_id": "52074ba6-e495-4ef3-9bb4-0703888a9f68",
+        "artist_name": "Arcade Fire",
+        "similarity_score": 0.9425362348556519
+      }
+    ]
+  },
+  {
+    "source_artist": "The_Strokes",
+    "recommendations": [
+      {
+        "rank": 2,
+        "artist_id": "c485632c-b784-4ee9-8ea1-c5fb365681fc",
+        "artist_name": "MGMT",
+        "similarity_score": 0.9913234710693359
+      },
+      {
+        "rank": 3,
+        "artist_id": "63aa26c3-d59b-4da4-84ac-716b54f1ef4d",
+        "artist_name": "Tame Impala",
+        "similarity_score": 0.9872577786445618
+      },
+      {
+        "rank": 4,
+        "artist_id": "e21857d5-3256-4547-afb3-4b6ded592596",
+        "artist_name": "Gorillaz",
+        "similarity_score": 0.9860948920249939
+      },
+      {
+        "rank": 5,
+        "artist_id": "6fe07aa5-fec0-4eca-a456-f29bff451b04",
+        "artist_name": "Weezer",
+        "similarity_score": 0.9848451614379883
+      },
+      {
+        "rank": 6,
+        "artist_id": "ada7a83c-e3e1-40f1-93f9-3e73dbc9298a",
+        "artist_name": "Arctic Monkeys",
+        "similarity_score": 0.9844914078712463
+      },
+      {
+        "rank": 7,
+        "artist_id": "a74b1b7f-71a5-4011-9441-d0b5e4122711",
+        "artist_name": "Radiohead",
+        "similarity_score": 0.9838240742683411
+      },
+      {
+        "rank": 8,
+        "artist_id": "b6b2bb8d-54a9-491f-9607-7b546023b433",
+        "artist_name": "Pixies",
+        "similarity_score": 0.9836043119430542
+      },
+      {
+        "rank": 9,
+        "artist_id": "40f5d9e4-2de7-4f2d-ad41-e31a9a9fea27",
+        "artist_name": "The Smiths",
+        "similarity_score": 0.9828956723213196
+      },
+      {
+        "rank": 10,
+        "artist_id": "aa7a2827-f74b-473c-bd79-03d065835cf7",
+        "artist_name": "Franz Ferdinand",
+        "similarity_score": 0.9803292155265808
+      },
+      {
+        "rank": 11,
+        "artist_id": "69ee3720-a7cb-4402-b48d-a02c366f2bcf",
+        "artist_name": "The Cure",
+        "similarity_score": 0.9801827073097229
+      },
+      {
+        "rank": 12,
+        "artist_id": "ba853904-ae25-4ebb-89d6-c44cfbd71bd2",
+        "artist_name": "Blur",
+        "similarity_score": 0.9799270033836365
+      },
+      {
+        "rank": 13,
+        "artist_id": "67f66c07-6e61-4026-ade5-7e782fad3a5d",
+        "artist_name": "Foo Fighters",
+        "similarity_score": 0.9781443476676941
+      },
+      {
+        "rank": 14,
+        "artist_id": "11ae9fbb-f3d7-4a47-936f-4c0a04d3b3b5",
+        "artist_name": "The White Stripes",
+        "similarity_score": 0.9778380393981934
+      },
+      {
+        "rank": 15,
+        "artist_id": "d15721d8-56b4-453d-b506-fc915b14cba2",
+        "artist_name": "The Black Keys",
+        "similarity_score": 0.9776575565338135
+      },
+      {
+        "rank": 16,
+        "artist_id": "7dc8f5bd-9d0b-4087-9f73-dc164950bbd8",
+        "artist_name": "Queens of the Stone Age",
+        "similarity_score": 0.9776515960693359
+      },
+      {
+        "rank": 17,
+        "artist_id": "8bfac288-ccc5-448d-9573-c33ea2aa5c30",
+        "artist_name": "Red Hot Chili Peppers",
+        "similarity_score": 0.9770300388336182
+      },
+      {
+        "rank": 18,
+        "artist_id": "5b11f4ce-a62d-471e-81fc-a69a8278c7da",
+        "artist_name": "Nirvana",
+        "similarity_score": 0.9769169092178345
+      },
+      {
+        "rank": 19,
+        "artist_id": "9c9f1380-2516-4fc9-a3e6-f9f61941d090",
+        "artist_name": "Muse",
+        "similarity_score": 0.9764794707298279
+      },
+      {
+        "rank": 20,
+        "artist_id": "af37c51c-0790-4a29-b995-456f98a6b8c9",
+        "artist_name": "Vampire Weekend",
+        "similarity_score": 0.9760164022445679
+      }
+    ]
   }
 ]

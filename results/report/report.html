@@ -177,11 +177,23 @@
                     font-size: 0.8em;
                 }
             }
+            /* New style for network visualization */
+            .network-visualization {
+                text-align: center;
+                width: 70%;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+            .network-visualization img {
+                max-width: 100%;
+                height: auto;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
         </style>
     </head>
     <body>
         <h1>ListenBrainz Collaborative Filtering Report</h1>
-        <p>Generated on 2025-03-01 01:24:29</p>
+        <p>Generated on 2025-03-01 13:13:05</p>
         
         <!-- Executive Summary -->
         <div class="executive-summary">
@@ -511,17 +523,17 @@
                         <div class="stats-box">
                             <h3>Casual Listeners</h3>
                             <p>The majority group with moderate artist diversity but lower overall listening time.</p>
-                            <p><strong>Users:</strong> 1,622</p>
-                            <p><strong>Avg. Artists:</strong> 2014.5</p>
-                            <p><strong>Avg. Listens:</strong> 23390.8</p>
+                            <p><strong>Users:</strong> 12,493</p>
+                            <p><strong>Avg. Artists:</strong> 381.7</p>
+                            <p><strong>Avg. Listens:</strong> 2719.9</p>
                         </div>
                         
                         <div class="stats-box">
                             <h3>Power Users</h3>
                             <p>A small group of highly engaged users with extremely high listen counts and strong artist loyalty.</p>
-                            <p><strong>Users:</strong> 12,495</p>
-                            <p><strong>Avg. Artists:</strong> 381.7</p>
-                            <p><strong>Avg. Listens:</strong> 2721.9</p>
+                            <p><strong>Users:</strong> 1,624</p>
+                            <p><strong>Avg. Artists:</strong> 2012.7</p>
+                            <p><strong>Avg. Listens:</strong> 23381.1</p>
                         </div>
                         
                         <div class="stats-box">
@@ -1305,7 +1317,7 @@
             <p>The network visualization below shows relationships between artists based on similarity scores.
             Connected artists are frequently listened to by the same users.</p>
             
-            <div class="visualization full-width">
+            <div class="network-visualization">
                 <img src="images/artist_network.png" alt="Artist Relationship Network">
                 <p><em>Network graph showing artist relationships based on listener overlap. 
                 Clusters indicate genres or musical styles.</em></p>
@@ -1341,7 +1353,7 @@
                 <p><em>Overlap percentage between our model and Last.fm recommendations</em></p>
             </div>
     
-            <p>The model's recommendations have an average overlap of <strong>28.00%</strong> 
+            <p>The model's recommendations have an average overlap of <strong>27.00%</strong> 
             with Last.fm's recommendations for the same artists.</p>
             
             <h3>Detailed Comparison</h3>
@@ -1353,63 +1365,63 @@
                 </tr>
             
                 <tr>
-                    <td>The Pineapple Thief</td>
-                    <td>60.00%</td>
-                    <td>Steven Wilson, Riverside, Gazpacho, Blackfield, Pure Reason Revolution</td>
-                </tr>
-                
-                <tr>
-                    <td>Foo Fighters</td>
-                    <td>30.00%</td>
-                    <td>Nirvana, Red Hot Chili Peppers, Pearl Jam</td>
-                </tr>
-                
-                <tr>
-                    <td>Alvvays</td>
-                    <td>10.00%</td>
-                    <td>Beach House</td>
+                    <td>Radiohead</td>
+                    <td>20.00%</td>
+                    <td>Muse, Nirvana</td>
                 </tr>
                 
                 <tr>
                     <td>Timecop1983</td>
                     <td>40.00%</td>
-                    <td>Kalax, Neon Nox, Miami Nights 1984, The Midnight</td>
+                    <td>Kalax, The Midnight, Miami Nights 1984, Neon Nox</td>
                 </tr>
                 
                 <tr>
-                    <td>Yumi Zouma</td>
+                    <td>The Strokes</td>
                     <td>30.00%</td>
-                    <td>Hazel English, Fazerdaze, Barrie</td>
+                    <td>Radiohead, Arctic Monkeys, Franz Ferdinand</td>
                 </tr>
                 
                 <tr>
-                    <td>Emancipator</td>
-                    <td>30.00%</td>
-                    <td>Bonobo, Little People, Tycho</td>
-                </tr>
-                
-                <tr>
-                    <td>Nirvana</td>
+                    <td>Metric</td>
                     <td>10.00%</td>
-                    <td>Foo Fighters</td>
-                </tr>
-                
-                <tr>
-                    <td>Men I Trust</td>
-                    <td>30.00%</td>
-                    <td>Crumb, Clairo, The Marías</td>
-                </tr>
-                
-                <tr>
-                    <td>Steven Wilson</td>
-                    <td>30.00%</td>
-                    <td>The Pineapple Thief, Riverside, Porcupine Tree</td>
+                    <td>Yeah Yeah Yeahs</td>
                 </tr>
                 
                 <tr>
                     <td>Tycho</td>
                     <td>10.00%</td>
                     <td>Bonobo</td>
+                </tr>
+                
+                <tr>
+                    <td>Yumi Zouma</td>
+                    <td>30.00%</td>
+                    <td>Barrie, Fazerdaze, Hazel English</td>
+                </tr>
+                
+                <tr>
+                    <td>Steven Wilson</td>
+                    <td>30.00%</td>
+                    <td>Riverside, The Pineapple Thief, Porcupine Tree</td>
+                </tr>
+                
+                <tr>
+                    <td>The Pineapple Thief</td>
+                    <td>60.00%</td>
+                    <td>Steven Wilson, Pure Reason Revolution, Blackfield, Lunatic Soul, Riverside</td>
+                </tr>
+                
+                <tr>
+                    <td>Emancipator</td>
+                    <td>30.00%</td>
+                    <td>Little People, Tycho, Bonobo</td>
+                </tr>
+                
+                <tr>
+                    <td>The Midnight</td>
+                    <td>10.00%</td>
+                    <td>Timecop1983</td>
                 </tr>
                 
             </table>
